@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Smartphone X200",
+    "description": "Latest generation smartphone with a high-resolution camera and fast processor.",
+    "price": 899.99,
+    "category": "Electronics",
+    "inventoryCount": 30,
+    "discount": 10,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://www.91-cdn.com/hub/wp-content/uploads/2024/10/Vivo-X200-Pro.png?tr=w-781"
+  },
+  {
+    "name": "Gaming Laptop Pro",
+    "description": "High-performance gaming laptop with RGB keyboard and advanced cooling system.",
+    "price": 1499.99,
+    "category": "Computers",
+    "inventoryCount": 20,
+    "discount": 15,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLK07-TO08Ffn5yLbvRSX2FUGavXMyzBStzw&s"
+  },
+  {
+    "name": "Fitness Tracker Band",
+    "description": "Track your workouts, heart rate, and sleep patterns with this fitness band.",
+    "price": 49.99,
+    "category": "Wearables",
+    "inventoryCount": 100,
+    "discount": 5,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://cdn.mos.cms.futurecdn.net/Pk5ydxYo6ty2Q4SX9vznP6.jpg"
+  },
+  {
+    "name": "4K Ultra HD TV",
+    "description": "Large screen TV with stunning 4K resolution and built-in streaming apps.",
+    "price": 799.99,
+    "category": "Home Appliances",
+    "inventoryCount": 15,
+    "discount": 20,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://www.lg.com/bd/images/tvs/md07596272/43UR7550PSC-tv-uhd-04-big-screen-mobile.jpg"
+  },
+  {
+    "name": "Electric Kettle",
+    "description": "Fast-boiling electric kettle with auto shut-off and stainless steel design.",
+    "price": 29.99,
+    "category": "Kitchen Appliances",
+    "inventoryCount": 80,
+    "discount": 10,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://example.com/images/electric-kettle.jpg"
+  },
+  {
+    "name": "Running Shoes",
+    "description": "Comfortable and durable running shoes designed for athletes.",
+    "price": 59.99,
+    "category": "Sportswear",
+    "inventoryCount": 60,
+    "discount": 5,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://example.com/images/running-shoes.jpg"
+  },
+  {
+    "name": "Wireless Keyboard and Mouse",
+    "description": "Ergonomic wireless keyboard and mouse combo with long battery life.",
+    "price": 49.99,
+    "category": "Accessories",
+    "inventoryCount": 70,
+    "discount": 10,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://example.com/images/keyboard-mouse.jpg"
+  },
+  {
+    "name": "Portable Bluetooth Speaker",
+    "description": "Compact and waterproof Bluetooth speaker with excellent sound quality.",
+    "price": 89.99,
+    "category": "Audio",
+    "inventoryCount": 50,
+    "discount": 8,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://example.com/images/bluetooth-speaker.jpg"
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "description": "Adjustable office chair with lumbar support and breathable mesh back.",
+    "price": 199.99,
+    "category": "Furniture",
+    "inventoryCount": 25,
+    "discount": 12,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://example.com/images/office-chair.jpg"
+  },
+  {
+    "name": "Stylish Backpack",
+    "description": "Lightweight and durable backpack with multiple compartments.",
+    "price": 39.99,
+    "category": "Bags",
+    "inventoryCount": 150,
+    "discount": 10,
+    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "image": "https://example.com/images/backpack.jpg"
+  }
+]
