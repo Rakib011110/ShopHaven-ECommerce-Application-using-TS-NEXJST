@@ -33,7 +33,7 @@ const Sidebar = () => {
 
   const [users, setUsers] = useState<User>();
 
-  console.log("usersss", users);
+  // console.log("usersss", users);
 
   useEffect(() => {
     const fetchUserPosts = async () => {
@@ -49,7 +49,7 @@ const Sidebar = () => {
 
   // for updatate
   const handleUpdateProfile = async (formData: any) => {
-    console.log("Updating Profile with Data:", formData); // Debugging log
+    // console.log("Updating Profile with Data:", formData); // Debugging log
     try {
       const response = await clientAxiosInstance.patch(
         `/users/${user?._id}`,
@@ -62,12 +62,12 @@ const Sidebar = () => {
 
       const updatedUser = response.data;
 
-      console.log("Updated User Data:", updatedUser);
+      // console.log("Updated User Data:", updatedUser);
 
       toast.success("Profile updated successfully!");
       setIsModalOpen(false);
     } catch (error: any) {
-      console.error("Failed to update profile:", error);
+      // console.error("Failed to update profile:", error);
       toast.error(`Failed to update profile: ${error.message}`);
     }
   };

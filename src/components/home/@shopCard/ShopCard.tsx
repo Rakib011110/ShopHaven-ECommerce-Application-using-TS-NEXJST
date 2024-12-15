@@ -1,10 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  useAddItemToCartMutation,
-  useGetCartItemsQuery,
-} from "@/src/redux/api/cartApi";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Image } from "@nextui-org/image";
@@ -15,6 +11,11 @@ import {
   ModalFooter,
   ModalHeader,
 } from "@nextui-org/react";
+
+import {
+  useAddItemToCartMutation,
+  useGetCartItemsQuery,
+} from "@/src/redux/api/cartApi";
 
 const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
   const [addToCart] = useAddItemToCartMutation();
@@ -29,6 +30,7 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
     if (cartVendor && cartVendor !== productVendor) {
       setPendingProduct(product);
       setShowWarning(true);
+
       return;
     }
 
@@ -38,6 +40,7 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
   const addProductToCart = async (product: any) => {
     try {
       const payload = { productId: product.id, quantity: 1 };
+
       await addToCart(payload).unwrap();
       alert("Product added to cart successfully!");
     } catch (error: any) {

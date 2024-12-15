@@ -59,7 +59,9 @@ const LoginPage = () => {
           </TIForm>
           <div className="text-center mt-4">
             <span className="text-gray-600">Do not have an account?</span>{" "}
-            <Link href="/register" className="text-blue-600 hover:underline">
+            <Link
+              href="/register-customer"
+              className="text-blue-600 hover:underline">
               Register
             </Link>
           </div>

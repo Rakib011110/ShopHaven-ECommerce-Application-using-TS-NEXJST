@@ -14,7 +14,7 @@ const OrderPayment = () => {
   const params = useParams();
   const orderId = params?.orderId;
 
-  console.log(orderId);
+  //   console.log(orderId);
 
   if (!orderId) {
     return <div>Order ID is missing!</div>;

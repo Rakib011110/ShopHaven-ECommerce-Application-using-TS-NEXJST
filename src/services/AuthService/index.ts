@@ -29,7 +29,7 @@ export const loginUser = async (userData: FieldValues) => {
       (await cookies()).set("accessToken", data?.data?.accessToken);
       (await cookies()).set("refreshToken", data?.data?.refreshToken);
     }
-    console.log(data);
+    // console.log(data);
 
     return data;
   } catch (error: any) {

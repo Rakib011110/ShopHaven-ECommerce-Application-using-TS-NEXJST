@@ -22,7 +22,7 @@ interface Product extends IProduct {
 const Categories: React.FC = () => {
   // Fetch products using the query hook
   const { data, isLoading, error } = useGetAllProductsQuery({});
-  console.log(data);
+  // console.log(data);
   const products: Product[] =
     data?.data.map((product: any) => ({
       id: product.id,

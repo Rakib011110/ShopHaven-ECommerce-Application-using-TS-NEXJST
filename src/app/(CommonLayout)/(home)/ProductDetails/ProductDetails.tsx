@@ -58,7 +58,6 @@ const ProductDetails = ({ productId }: { productId: string }) => {
         comment: reviewText,
       });
       // alert("Review submitted successfully!");
-      console.log(response);
       setReviewText("");
       setRating(null);
     } catch (error) {

@@ -36,8 +36,6 @@ const Cart = () => {
   const [couponCode, setCouponCode] = useState("");
   const router = useRouter();
 
-  console.log(cart?.data);
-
   if (isLoading) {
     return <div>Loading your cart...</div>;
   }
@@ -92,10 +90,8 @@ const Cart = () => {
         totalAmount,
       }).unwrap();
 
-      console.log(response);
       router.push(`/order/${response.data.id}`);
     } catch (error) {
-      console.error("Failed to place order:", error);
       alert("Failed to place order.");
     }
   };

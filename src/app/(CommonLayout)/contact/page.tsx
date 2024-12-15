@@ -26,8 +26,7 @@ const ContactDetails = () => (
       <strong>Email:</strong>{" "}
       <a
         className="text-blue-600 underline"
-        href={`mailto:${contactDetails.email}`}
-      >
+        href={`mailto:${contactDetails.email}`}>
         {contactDetails.email}
       </a>
     </p>
@@ -45,7 +44,6 @@ const ContactForm = () => {
   } = useForm<FormInputs>();
   const onSubmit: SubmitHandler<FormInputs> = (data) => {
     alert("Your message has been submitted!");
-    console.log("Form Data:", data);
   };
 
   return (
@@ -58,8 +56,7 @@ const ContactForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 font-semibold mb-2"
-            htmlFor="name"
-          >
+            htmlFor="name">
             Your Name
           </label>
           <input
@@ -78,8 +75,7 @@ const ContactForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-700 font-semibold mb-2"
-            htmlFor="email"
-          >
+            htmlFor="email">
             Your Email
           </label>
           <input
@@ -104,8 +100,7 @@ const ContactForm = () => {
         <div className="mb-6">
           <label
             className="block text-gray-700 font-semibold mb-2"
-            htmlFor="message"
-          >
+            htmlFor="message">
             Message
           </label>
           <textarea
@@ -125,8 +120,7 @@ const ContactForm = () => {
         {/* Submit Button */}
         <button
           className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300"
-          type="submit"
-        >
+          type="submit">
           Send Message
         </button>
       </form>

@@ -1,5 +1,3 @@
-import CreatePost from "@/src/components/home/@createposts/page";
-import NewsFeed from "@/src/app/(CommonLayout)/(home)/@newsfeed/page";
 import Banner from "@/src/components/home/@banner/page";
 import Products from "@/src/components/home/@availableProducts/page";
 import Categories from "@/src/components/home/@productCategory/page";
@@ -18,7 +16,6 @@ export default function Home() {
         <Categories />
       </div>
       <WhyChooseUs />
-      <NewsFeed />
     </div>
   );
 }
