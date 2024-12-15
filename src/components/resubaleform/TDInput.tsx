@@ -85,57 +85,49 @@ export default function TIInput({
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleInlineStyle("BOLD")}
-          >
+            onClick={() => toggleInlineStyle("BOLD")}>
             <b>B</b>
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleInlineStyle("ITALIC")}
-          >
+            onClick={() => toggleInlineStyle("ITALIC")}>
             <i>I</i>
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleInlineStyle("UNDERLINE")}
-          >
+            onClick={() => toggleInlineStyle("UNDERLINE")}>
             <u>U</u>
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleInlineStyle("STRIKETHROUGH")}
-          >
+            onClick={() => toggleInlineStyle("STRIKETHROUGH")}>
             <s>S</s>
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleBlockType("unordered-list-item")}
-          >
+            onClick={() => toggleBlockType("unordered-list-item")}>
             • List
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleBlockType("ordered-list-item")}
-          >
+            onClick={() => toggleBlockType("ordered-list-item")}>
             1. List
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleBlockType("blockquote")}
-          >
+            onClick={() => toggleBlockType("blockquote")}>
             “ Blockquote
           </button>
           <button
             className="text-xl"
             type="button"
-            onClick={() => toggleBlockType("code-block")}
-          >
+            onClick={() => toggleBlockType("code-block")}>
             {"</>"} Code
           </button>
         </div>
@@ -143,8 +135,7 @@ export default function TIInput({
         <div
           className={`border ${
             errors[name] ? "border-red-500" : "border-gray-300"
-          } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 p-2 min-h-[150px]`}
-        >
+          } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 p-2 min-h-[150px]`}>
           <Editor
             editorState={editorState}
             handleKeyCommand={handleKeyCommand}

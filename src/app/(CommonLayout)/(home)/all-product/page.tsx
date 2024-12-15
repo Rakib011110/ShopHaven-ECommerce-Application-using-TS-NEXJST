@@ -10,7 +10,7 @@ import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 
 const AllProducts: React.FC = () => {
   const searchParams = useSearchParams();
-  const category = searchParams.get("category");
+  const category = searchParams?.get("category");
 
   const { data, isLoading, error } = useGetAllProductsQuery({});
   const [filteredProducts, setFilteredProducts] = useState([]);

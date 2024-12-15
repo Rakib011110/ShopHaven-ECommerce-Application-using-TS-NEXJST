@@ -1,7 +1,7 @@
 "use client";
 import OrderPayment from "@/src/components/home/@OrderPayment/OrderPayment";
 
-const PaymentPage = ({ params }: { params: { orderId: string } }) => {
+const PaymentPage = () => {
   return <OrderPayment />;
 };
 

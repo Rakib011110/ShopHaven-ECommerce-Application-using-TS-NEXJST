@@ -7,8 +7,8 @@ const baseApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://e-commerce-application-backend-puce.vercel.app/api/v1",
   }),
-  tagTypes: ["User", "Cart", "follow", "Shop", "Order", "Review"], // Define tags for caching and invalidation
-  endpoints: () => ({}), // Extend later with endpoints
+  tagTypes: ["User", "Cart", "follow", "Shop", "Order", "Review"],
+  endpoints: () => ({}),
 });
 
 export default baseApi;

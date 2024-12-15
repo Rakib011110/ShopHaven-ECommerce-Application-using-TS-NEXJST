@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 
 import { useUser } from "@/src/context/user.provider";
 import "react-toastify/dist/ReactToastify.css";
-import { useCreatePost } from "@/src/hooks/useCreatePost";
 
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
@@ -17,7 +16,6 @@ export default function CreatePost() {
   const { user } = useUser();
 
   console.log(user);
-  const { mutate: handleCreatePost } = useCreatePost();
 
   const methods = useForm();
   const { handleSubmit } = methods;
@@ -90,25 +88,8 @@ export default function CreatePost() {
     const postData = {
       ...data,
       images: postImages, // postImages are URLs already
-      author: user._id,
+      author: user.id,
     };
-
-    try {
-      handleCreatePost(postData, {
-        onSuccess: () => {
-          toast.success("Post created successfully!");
-          setImagePreviews([]);
-          setPostImages([]);
-          methods.reset();
-          setIsModalOpen(false);
-        },
-        onError: () => {
-          toast.error("Failed to create post.");
-        },
-      });
-    } catch (error) {
-      toast.error("Error submitting form data.");
-    }
   };
 
   return <div>HERE WASE POST APLOD</div>;

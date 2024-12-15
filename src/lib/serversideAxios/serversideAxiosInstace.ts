@@ -14,9 +14,9 @@ const serverAxiosInstance = axios.create({
 });
 
 serverAxiosInstance.interceptors.request.use(
-  (config) => {
+  async (config) => {
     const cookieStore = cookies();
-    const accessToken = cookieStore.get("accessToken")?.value;
+    const accessToken = (await cookieStore).get("accessToken")?.value;
 
     if (accessToken) {
       config.headers.Authorization = accessToken;
@@ -24,7 +24,7 @@ serverAxiosInstance.interceptors.request.use(
 
     return config;
   },
-  (error) => Promise.reject(error),
+  (error) => Promise.reject(error)
 );
 
 serverAxiosInstance.interceptors.response.use(
@@ -38,13 +38,13 @@ serverAxiosInstance.interceptors.response.use(
       const accessToken = res.data.accessToken;
 
       config.headers["Authorization"] = accessToken;
-      cookies().set("accessToken", accessToken);
+      (await cookies()).set("accessToken", accessToken);
 
       return serverAxiosInstance(config);
     }
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export default serverAxiosInstance;
