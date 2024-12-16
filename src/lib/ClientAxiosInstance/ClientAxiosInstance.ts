@@ -22,7 +22,7 @@ clientAxiosInstance.interceptors.request.use(
   },
   function (error) {
     return Promise.reject(error);
-  },
+  }
 );
 
 export default clientAxiosInstance;

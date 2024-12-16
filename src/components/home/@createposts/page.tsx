@@ -9,7 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function CreatePost() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [postImages, setPostImages] = useState<string[]>([]);
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
 
@@ -87,8 +86,6 @@ export default function CreatePost() {
 
     const postData = {
       ...data,
-      images: postImages, // postImages are URLs already
-      author: user.id,
     };
   };
 

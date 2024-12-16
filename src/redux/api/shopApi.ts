@@ -31,6 +31,21 @@ export const ShopApi = baseApi.injectEndpoints({
       providesTags: (result, error, id) => [{ type: "Shop", id }],
     }),
 
+    getVendorShop: builder.query({
+      query: () => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: "/shop/vendor",
+          method: "GET",
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      providesTags: ["Shop"],
+    }),
+
     // Create a new shop
     createShop: builder.mutation({
       query: (shopData) => {
@@ -50,11 +65,11 @@ export const ShopApi = baseApi.injectEndpoints({
 
     // Update an existing shop
     updateShop: builder.mutation({
-      query: ({ id, updatedData }) => {
+      query: (updatedData) => {
         const token = Cookies.get("accessToken");
 
         return {
-          url: `/shop/${id}`,
+          url: `/shop`,
           method: "PUT",
           body: updatedData,
           headers: {
@@ -62,7 +77,7 @@ export const ShopApi = baseApi.injectEndpoints({
           },
         };
       },
-      invalidatesTags: (result, error, { id }) => [{ type: "Shop", id }],
+      invalidatesTags: ["Shop"],
     }),
 
     // Soft delete a shop
@@ -89,4 +104,5 @@ export const {
   useCreateShopMutation,
   useUpdateShopMutation,
   useDeleteShopMutation,
+  useGetVendorShopQuery,
 } = ShopApi;
