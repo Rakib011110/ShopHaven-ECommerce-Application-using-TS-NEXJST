@@ -115,10 +115,10 @@ const Products = () => {
           value={selectedCategory || ""}
           onChange={(e) => handleCategoryChange(e.target.value)}>
           <option value="">All Categories</option>
-          <option value="Tents">Tents</option>
-          <option value="Camping Gear">Camping Gear</option>
-          <option value="Safety">Safety</option>
-          <option value="Backpacks">Backpacks</option>
+          <option value="Outdoor Essentials">Outdoor Essentials</option>
+          <option value="Tech & Gadgets">Tech & Gadgets</option>
+          <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
+          <option value="Home & Kitchen">Home & Kitchen</option>
         </select>
 
         <div className="flex gap-2">
