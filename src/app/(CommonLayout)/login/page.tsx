@@ -65,6 +65,12 @@ const LoginPage = () => {
               Register
             </Link>
           </div>
+          <div className="text-center mt-4">
+            <span className="text-gray-600">Forgott Password?</span>{" "}
+            <Link href="/forgot-pass" className="text-blue-600 hover:underline">
+              forgot
+            </Link>
+          </div>
         </div>
       </div>
     </>

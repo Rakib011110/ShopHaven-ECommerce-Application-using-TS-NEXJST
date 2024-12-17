@@ -4,7 +4,6 @@ import baseApi from "../baseApi";
 
 export const ShopApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    // Fetch all shops
     getAllShops: builder.query({
       query: () => {
         return {
@@ -12,10 +11,9 @@ export const ShopApi = baseApi.injectEndpoints({
           method: "GET",
         };
       },
-      providesTags: ["Shop"], // For cache invalidation
+      providesTags: ["Shop"],
     }),
 
-    // Fetch a shop by ID
     getShopById: builder.query({
       query: (id: string) => {
         const token = Cookies.get("accessToken");
@@ -80,7 +78,28 @@ export const ShopApi = baseApi.injectEndpoints({
       invalidatesTags: ["Shop"],
     }),
 
-    // Soft delete a shop
+    // getAllShops: builder.query({
+    //   query: () => {
+    //     return { url: "/shop", method: "GET" };
+    //   },
+    //   providesTags: ["Shop"],
+    // }),
+
+    blacklistShop: builder.mutation({
+      query: (id: string) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/shop/${id}/blacklist`, // Assume backend has /shop/:id/blacklist endpoint
+          method: "PATCH",
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      invalidatesTags: ["Shop"],
+    }),
+
     deleteShop: builder.mutation({
       query: (id: string) => {
         const token = Cookies.get("accessToken");
@@ -93,7 +112,7 @@ export const ShopApi = baseApi.injectEndpoints({
           },
         };
       },
-      invalidatesTags: ["Shop"], // Invalidate all shop queries
+      invalidatesTags: ["Shop"],
     }),
   }),
 });
@@ -105,4 +124,21 @@ export const {
   useUpdateShopMutation,
   useDeleteShopMutation,
   useGetVendorShopQuery,
+  useBlacklistShopMutation,
 } = ShopApi;
+
+// // shopApi.ts
+// import Cookies from "js-cookie";
+// import baseApi from "../baseApi";
+
+// export const ShopApi = baseApi.injectEndpoints({
+//   endpoints: (builder) => ({
+
+//   }),
+// });
+
+// export const {
+//   useGetAllShopsQuery,
+//   useBlacklistShopMutation,
+//   useDeleteShopMutation,
+// } = ShopApi;

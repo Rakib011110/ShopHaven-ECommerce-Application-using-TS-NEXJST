@@ -10,5 +10,5 @@ const Vendor = () => {
     </div>
   );
 };
-
+  
 export default Vendor;

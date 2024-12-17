@@ -2,10 +2,11 @@
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { Link } from "@nextui-org/link";
-import { Button } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { useState } from "react";
 
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
+import Title from "@/src/lib/utils/Title";
 
 interface Product {
   id: string;
@@ -17,13 +18,13 @@ interface Product {
 }
 
 const Products = () => {
-  // Ensure proper destructuring from useGetAllProductsQuery
   const { data, isLoading, error } = useGetAllProductsQuery({});
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc" | null>(null);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -53,9 +54,9 @@ const Products = () => {
     setSelectedCategory(null);
     setPriceRange([0, 1000]);
     setSortOrder(null);
+    setVisibleCount(10);
   };
 
-  // Map API response to expected structure
   const products: Product[] =
     data?.data.map((product: any) => ({
       id: product.id,
@@ -66,6 +67,7 @@ const Products = () => {
       image: product.image,
     })) || [];
 
+  // Filter, sort, and slice products
   const filteredProducts = products
     .filter(
       (product: Product) =>
@@ -85,13 +87,20 @@ const Products = () => {
       return 0;
     });
 
+  const visibleProducts = filteredProducts.slice(0, visibleCount);
+
+  const loadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 10);
+  };
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading products</div>;
 
   return (
-    <div className="max-w-screen-lg mx-auto p-6">
-      <h1 className="text-3xl font-semibold mb-4">Products</h1>
+    <div className="container mx-auto p-6 mt-32">
+      <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} />
 
+      {/* Filters */}
       <div className="mb-4 flex gap-4">
         <input
           className="border px-4 py-2 rounded"
@@ -144,27 +153,39 @@ const Products = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProducts.map((product: Product) => (
+      {/* Product Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {visibleProducts.map((product: Product) => (
           <div
             key={product.id}
             className="border border-blue-600 rounded-xl bg-white shadow-md p-4">
-            <Zoom>
-              <img
+            <div className="flex justify-center">
+              <Image
                 alt={product.name}
                 className="h-40 w-full border p-3 border-blue-800 object-cover rounded-md mb-4"
                 src={product.image}
               />
-            </Zoom>
+            </div>
             <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
             <p className="text-gray-600 mb-2">{product.description}</p>
             <p className="text-lg font-bold mb-4">${product.price}</p>
-            <Link href={`/products/${product.id}`}>
-              <Button>Click Here</Button>
+            <Link href={`/product/${product.id}`}>
+              <Button>Details</Button>
             </Link>
           </div>
         ))}
       </div>
+
+      {/* Show More Button */}
+      {visibleCount < filteredProducts.length && (
+        <div className="flex justify-center mt-6">
+          <button
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            onClick={loadMore}>
+            Show More
+          </button>
+        </div>
+      )}
     </div>
   );
 };

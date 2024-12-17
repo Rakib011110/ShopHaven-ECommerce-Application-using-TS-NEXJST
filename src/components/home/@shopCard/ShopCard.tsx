@@ -24,8 +24,8 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
   const [pendingProduct, setPendingProduct] = useState<any>(null);
 
   const handleAddToCart = async (product: any) => {
-    const productVendor = shop.id; // Vendor ID of the current shop
-    const cartVendor = cart?.vendorId; // Vendor ID of items in the cart
+    const productVendor = shop.id;
+    const cartVendor = cart?.vendorId;
 
     if (cartVendor && cartVendor !== productVendor) {
       setPendingProduct(product);
@@ -44,8 +44,8 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
       await addToCart(payload).unwrap();
       alert("Product added to cart successfully!");
     } catch (error: any) {
-      console.error("Error adding to cart:", error?.data || error);
-      alert("Failed to add product to cart.");
+      // console.error("Error adding to cart:", error?.data || error);
+      alert("Failed to add product to cart. make sure you are a customer");
     }
   };
 
@@ -100,9 +100,8 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
           <Divider />
 
           <CardFooter>
-            <p className="font-semibold">Products:</p>
             {shop.products && shop.products.length > 0 ? (
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="grid p-4 w-full sm:grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {shop.products.map((product: any) => (
                   <div
                     key={product.id}

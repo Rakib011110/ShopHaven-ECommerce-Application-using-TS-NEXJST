@@ -24,12 +24,16 @@ export const siteConfig = {
       href: "recent-products",
     },
     {
+      label: "All Products",
+      href: "all-products",
+    },
+    {
       label: "Flash Sale",
       href: "/flashSales",
     },
 
     {
-      label: "Contact Us",
+      label: "📞Contact Us",
       href: "/contact",
     },
     // {
@@ -38,7 +42,7 @@ export const siteConfig = {
     // },
 
     {
-      label: "Cart",
+      label: "🛒Cart",
       href: "/cart",
     },
   ],

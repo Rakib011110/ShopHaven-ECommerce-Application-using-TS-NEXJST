@@ -46,7 +46,7 @@ const FlashSales: React.FC = () => {
           <div className="mt-8 text-center">
             <Link
               href="/flashSales"
-              className="bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition">
+              className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition">
               View All Flash Sale Products
             </Link>
           </div>

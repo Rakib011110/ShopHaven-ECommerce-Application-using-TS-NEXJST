@@ -82,3 +82,16 @@ export const getNewAccessToken = async () => {
     throw new Error("Failed to get new access token");
   }
 };
+export const forgotPassword = async (userData: { email: string }) => {
+  try {
+    const { data } = await axiosInstance.post(
+      "/auth/forgot-password",
+      userData
+    );
+    return data;
+  } catch (error: any) {
+    throw new Error(
+      error.response?.data?.message || "Failed to send reset link"
+    );
+  }
+};

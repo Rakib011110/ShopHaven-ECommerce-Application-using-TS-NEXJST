@@ -1,13 +1,15 @@
+import Cookies from "js-cookie";
+
 import baseApi from "../baseApi";
 
 export const productApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    // Fetch all products
     getAllProducts: builder.query({
       query: (args) => ({
         url: "/product",
-        params: args, // Pass optional filters or pagination arguments
+        params: args,
       }),
+      providesTags: ["Products"],
     }),
 
     // Fetch a product by ID
@@ -17,28 +19,51 @@ export const productApi = baseApi.injectEndpoints({
 
     // Create a new product
     createProduct: builder.mutation({
-      query: (productData) => ({
-        url: "/product",
-        method: "POST",
-        body: productData,
-      }),
+      query: (productData) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: "/product",
+          method: "POST",
+          body: productData,
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      invalidatesTags: ["Products"],
     }),
 
-    // Update an existing product
     updateProduct: builder.mutation({
-      query: ({ id, productData }) => ({
-        url: `/product/${id}`,
-        method: "PUT",
-        body: productData,
-      }),
+      query: ({ id, productData }) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/product/${id}`,
+          method: "PUT",
+          body: productData,
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      invalidatesTags: ["Products"],
     }),
 
     // Soft delete a product
     deleteProduct: builder.mutation({
-      query: (id) => ({
-        url: `/product/${id}`,
-        method: "DELETE",
-      }),
+      query: (id) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/product/${id}`,
+          method: "DELETE",
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      invalidatesTags: ["Products"],
     }),
   }),
 });

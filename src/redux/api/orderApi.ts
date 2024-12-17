@@ -4,17 +4,16 @@ import baseApi from "../baseApi";
 
 export const orderApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    // Create a new order
     createOrder: builder.mutation({
       query: (orderData) => ({
         url: "/order",
         method: "POST",
         body: orderData,
         headers: {
-          Authorization: `${Cookies.get("accessToken")}`, // Add token to headers
+          Authorization: `${Cookies.get("accessToken")}`,
         },
       }),
-      invalidatesTags: ["Cart"], // Invalidate cart after order creation
+      invalidatesTags: ["Cart"],
     }),
 
     // Create a Stripe payment intent
@@ -23,19 +22,18 @@ export const orderApi = baseApi.injectEndpoints({
         url: `/order/${orderId}`,
         method: "POST",
         headers: {
-          Authorization: `${Cookies.get("accessToken")}`, // Add token to headers
+          Authorization: `${Cookies.get("accessToken")}`,
         },
       }),
     }),
 
-    // Update order status (e.g., Completed, Canceled)
     updateOrderStatus: builder.mutation({
       query: ({ orderId, status }) => ({
         url: `/order/${orderId}`,
         method: "PUT",
         body: { status },
         headers: {
-          Authorization: `${Cookies.get("accessToken")}`, // Add token to headers
+          Authorization: `${Cookies.get("accessToken")}`,
         },
       }),
       invalidatesTags: (result, error, { orderId }) => [
@@ -49,7 +47,7 @@ export const orderApi = baseApi.injectEndpoints({
         url: `/order/${orderId}`,
         method: "GET",
         headers: {
-          Authorization: `${Cookies.get("accessToken")}`, // Add token to headers
+          Authorization: `${Cookies.get("accessToken")}`,
         },
       }),
       providesTags: (result, error, orderId) => [
@@ -64,13 +62,12 @@ export const orderApi = baseApi.injectEndpoints({
         method: "GET",
         params: { page, limit },
         headers: {
-          Authorization: `${Cookies.get("accessToken")}`, // Add token to headers
+          Authorization: `${Cookies.get("accessToken")}`,
         },
       }),
       providesTags: ["Order"],
     }),
 
-    // Get all orders (NEW)
     getAllOrders: builder.query({
       query: ({ page = 1, limit = 10 }) => ({
         url: `/order`,

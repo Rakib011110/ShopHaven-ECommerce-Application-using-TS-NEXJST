@@ -22,29 +22,99 @@ const reviewApi = baseApi.injectEndpoints({
       invalidatesTags: ["Review"],
     }),
 
-    // Get reviews by product ID
+    // Get a specific review by ID
     getReview: builder.query({
-      query: (id) => `/reviews/${id}`,
+      query: (id) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/review/${id}`,
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
       providesTags: (result, error, id) => [{ type: "Review", id }],
     }),
 
     // Update a review
     updateReview: builder.mutation({
-      query: ({ id, ...updateData }) => ({
-        url: `/reviews/${id}`,
-        method: "PUT",
-        body: updateData,
-      }),
+      query: ({ id, ...updateData }) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/review/reply/${id}`,
+          method: "PUT",
+          body: updateData,
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
       invalidatesTags: (result, error, { id }) => [{ type: "Review", id }],
     }),
 
     // Delete a review
     deleteReview: builder.mutation({
-      query: (id) => ({
-        url: `/reviews/${id}`,
-        method: "DELETE",
-      }),
+      query: (id) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/review/${id}`,
+          method: "DELETE",
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
       invalidatesTags: (result, error, id) => [{ type: "Review", id }],
+    }),
+
+    // Add vendor reply to a review
+    addVendorReply: builder.mutation({
+      query: ({ id, reply }) => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: `/review/reply/${id}`,
+          method: "PUT",
+          body: { vendorReply: reply },
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      invalidatesTags: (result, error, { id }) => [{ type: "Review", id }],
+    }),
+
+    // Get all reviews for a vendor's customers
+    getAllCustomerReviews: builder.query({
+      query: () => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: "/review",
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      providesTags: ["Review"],
+    }),
+
+    // Get all reviews for a specific vendor
+    getVendorReviews: builder.query({
+      query: () => {
+        const token = Cookies.get("accessToken");
+
+        return {
+          url: "/review/vendor",
+          headers: {
+            Authorization: `${token}`,
+          },
+        };
+      },
+      providesTags: ["Review"],
     }),
   }),
   overrideExisting: false,
@@ -55,6 +125,9 @@ export const {
   useGetReviewQuery,
   useUpdateReviewMutation,
   useDeleteReviewMutation,
+  useAddVendorReplyMutation,
+  useGetAllCustomerReviewsQuery,
+  useGetVendorReviewsQuery,
 } = reviewApi;
 
 export default reviewApi;

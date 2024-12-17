@@ -6,7 +6,7 @@
     "category": "Electronics",
     "inventoryCount": 30,
     "discount": 10,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
     "image": "https://www.91-cdn.com/hub/wp-content/uploads/2024/10/Vivo-X200-Pro.png?tr=w-781"
   },
   {
@@ -16,7 +16,7 @@
     "category": "Computers",
     "inventoryCount": 20,
     "discount": 15,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLK07-TO08Ffn5yLbvRSX2FUGavXMyzBStzw&s"
   },
   {
@@ -26,7 +26,7 @@
     "category": "Wearables",
     "inventoryCount": 100,
     "discount": 5,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
     "image": "https://cdn.mos.cms.futurecdn.net/Pk5ydxYo6ty2Q4SX9vznP6.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "category": "Home Appliances",
     "inventoryCount": 15,
     "discount": 20,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
     "image": "https://www.lg.com/bd/images/tvs/md07596272/43UR7550PSC-tv-uhd-04-big-screen-mobile.jpg"
   },
   {
@@ -46,7 +46,7 @@
     "category": "Kitchen Appliances",
     "inventoryCount": 80,
     "discount": 10,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
     "image": "https://example.com/images/electric-kettle.jpg"
   },
   {
@@ -56,7 +56,7 @@
     "category": "Sportswear",
     "inventoryCount": 60,
     "discount": 5,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
     "image": "https://example.com/images/running-shoes.jpg"
   },
   {
@@ -66,7 +66,7 @@
     "category": "Accessories",
     "inventoryCount": 70,
     "discount": 10,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
     "image": "https://example.com/images/keyboard-mouse.jpg"
   },
   {
@@ -76,7 +76,7 @@
     "category": "Audio",
     "inventoryCount": 50,
     "discount": 8,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
     "image": "https://example.com/images/bluetooth-speaker.jpg"
   },
   {
@@ -86,7 +86,7 @@
     "category": "Furniture",
     "inventoryCount": 25,
     "discount": 12,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
     "image": "https://example.com/images/office-chair.jpg"
   },
   {
@@ -96,7 +96,7 @@
     "category": "Bags",
     "inventoryCount": 150,
     "discount": 10,
-    "shopId": "c64e0281-616e-4711-89d1-57640bf92d2d",
+    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
     "image": "https://example.com/images/backpack.jpg"
   }
 ]

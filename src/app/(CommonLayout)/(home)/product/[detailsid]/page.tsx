@@ -2,10 +2,8 @@
 
 import { useParams } from "next/navigation";
 import ProductDetails from "../../ProductDetails/ProductDetails";
-import { useUser } from "@/src/context/user.provider";
 
 const ProductDetailsPage = () => {
-  const { user } = useUser();
   const { detailsid } = useParams() as { detailsid: string };
 
   return (

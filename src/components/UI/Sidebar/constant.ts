@@ -15,13 +15,13 @@ export const dashboarduserLinks = [
 
 export const adminLinks = [
   { href: "/dashboard/admin", label: "Admin Dashboard" },
-  { href: "/admin", label: "Admin" },
+  // { href: "/admin", label: "Admin" },
   { href: "/dashboard/admin/users", label: "Manage Users" },
   { href: "/dashboard/admin/vendors", label: "Manage Vendors" },
   { href: "/dashboard/admin/blacklist", label: "Blacklist Shops" },
   { href: "/dashboard/admin/categories", label: "Manage Categories" },
   { href: "/dashboard/admin/transactions", label: "Monitor Transactions" },
-  { href: "/dashboard/admin/activity-log", label: "Activity Log" },
+  // { href: "/dashboard/admin/activity-log", label: "Activity Log" },
 ];
 
 export const vendorLinks = [
@@ -36,8 +36,8 @@ export const vendorLinks = [
 export const customerLinks = [
   { href: "/dashboard/customer", label: "Customer Dashboard" },
   { href: "/dashboard/customer/orders", label: "My Orders" },
-  { href: "/dashboard/customer/recent-products", label: "Recently Viewed" },
-  { href: "/dashboard/customer/favorites", label: "Favorite Products" },
-  { href: "/dashboard/customer/followed-shops", label: "Followed Shops" },
+  // { href: "/dashboard/customer/recent-products", label: "Recently Viewed" },
+  // { href: "/dashboard/customer/favorites", label: "Favorite Products" },
+  // { href: "/dashboard/customer/followed-shops", label: "Followed Shops" },
   { href: "/dashboard/customer/profile", label: "Profile Settings" },
 ];

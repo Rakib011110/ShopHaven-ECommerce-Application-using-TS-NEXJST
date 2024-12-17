@@ -4,7 +4,7 @@ import { IProduct } from "@/src/lib/utils/apitypes";
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import Title from "@/src/lib/utils/Title";
 import { useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 
 // Define the Product interface to match the IProduct type used in your API.
@@ -22,6 +22,7 @@ interface Product extends IProduct {
 const Categories: React.FC = () => {
   // Fetch products using the query hook
   const { data, isLoading, error } = useGetAllProductsQuery({});
+
   // console.log(data);
   const products: Product[] =
     data?.data.map((product: any) => ({
@@ -92,12 +93,17 @@ const Categories: React.FC = () => {
               <h2 className="text-xl font-semibold">
                 {category}
                 <Link
+                  className=""
                   href={`/all-product?category=${encodeURIComponent(category)}`}>
-                  <Button className="btn h-8">Show all</Button>
+                  <Button
+                    color="primary"
+                    className="from-blue-900  via-blue-700 to-blue-500  btn h-8">
+                    Show all
+                  </Button>
                 </Link>
               </h2>
               {categoryImage ? (
-                <img
+                <Image
                   alt={category}
                   className="w-full h-20 object-cover rounded-full mt-4"
                   src={categoryImage}
