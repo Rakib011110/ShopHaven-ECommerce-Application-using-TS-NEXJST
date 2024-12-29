@@ -118,7 +118,7 @@ const AllProducts = () => {
   if (error) return <div>Error loading products</div>;
 
   return (
-    <div className="container mx-auto p-6 mt-32">
+    <div className="container mx-auto p-6 ">
       <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} />
 
       {/* Filters */}

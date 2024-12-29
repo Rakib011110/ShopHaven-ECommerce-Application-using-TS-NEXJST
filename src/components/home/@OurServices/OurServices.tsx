@@ -6,15 +6,12 @@ const OurServices = () => {
   return (
     <div>
       <div className=" max-w-screen-2xl mx-auto mt-40 mb-40">
-        <Title
-          bigTitle={"Why Choose Us?"}
-          smallTitle={"Your Journey, Your Wheels, Your Way!"}
-        />
+        <Title bigTitle={"Why Choose Us?"} smallTitle={""} />
 
         <div className=" justify-center   max-w-screen-2xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 ">
           <div className=" p-8  rounded-lg  ">
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-blue-300 gap-8 mb-2 transform transition-transform hover:scale-105">
+              <div className=" p-6 rounded-lg shadow-lg text-center border-2 border-blue-300 gap-8 mb-2 transform transition-transform hover:scale-105">
                 <h3 className="text-2xl font-semibold mb-2 flex items-center justify-center">
                   <FaDollarSign className="text-blue-500 mr-2" />
                   Best Prices
@@ -24,7 +21,7 @@ const OurServices = () => {
                   money.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-green-300 mb-2 transform transition-transform hover:scale-105">
+              <div className=" p-6 rounded-lg shadow-lg text-center border-2 border-green-300 mb-2 transform transition-transform hover:scale-105">
                 <h3 className="text-2xl font-semibold mb-2 flex items-center justify-center">
                   <FaBoxes className="text-green-500 mr-2" />
                   Wide Selection
@@ -34,7 +31,7 @@ const OurServices = () => {
                   models to timeless classics.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-red-300 mb-2 transform transition-transform hover:scale-105">
+              <div className=" p-6 rounded-lg shadow-lg text-center border-2 border-red-300 mb-2 transform transition-transform hover:scale-105">
                 <h3 className="text-2xl font-semibold mb-2 flex items-center justify-center">
                   <FaHeadset className="text-red-500 mr-2" />
                   24/7 Support
@@ -67,7 +64,7 @@ const OurServices = () => {
               muted
               className="w-full  h-[100%] object-cover  aspect-square border-1 ">
               <source
-                src="https://res.cloudinary.com/dqp2vi7h1/video/upload/v1734455629/Black_and_White_Illustrative_Coming_Soon_Animated_Social_Media_ohwwww.mp4https://res.cloudinary.com/dqp2vi7h1/video/upload/v1734456268/Black_and_White_Illustrative_Coming_Soon_Animated_Social_Media_1_oji1n0.mp4"
+                src="https://res.cloudinary.com/dqp2vi7h1/video/upload/v1732543589/samples/cld-sample-video.mp4"
                 type="video/mp4"
               />
             </video>

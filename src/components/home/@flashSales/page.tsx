@@ -15,30 +15,30 @@ const FlashSales: React.FC = () => {
       <div className="justify-center max-w-screen-2xl mx-auto grid sm:grid-cols-1 md:grid-cols-2">
         <div className="p-8 rounded-lg">
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-yellow-300 gap-8 mb-2 transform transition-transform hover:scale-105">
+            <div className=" p-6 rounded-lg shadow-lg text-center border-2 border-yellow-300 gap-8 mb-2 transform transition-transform hover:scale-105">
               <h3 className="text-2xl font-semibold mb-2 flex items-center justify-center">
                 <FaTags className="text-yellow-500 mr-2" />
                 Exclusive Discounts
               </h3>
-              <p className="text-gray-600">
+              <p className=" font-serif">
                 Save big on select products during our limited-time flash sale!
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-red-300 mb-2 transform transition-transform hover:scale-105">
+            <div className=" p-6 rounded-lg shadow-lg text-center border-2 border-red-300 mb-2 transform transition-transform hover:scale-105">
               <h3 className="text-2xl font-semibold mb-2 flex items-center justify-center">
                 <FaClock className="text-red-500 mr-2" />
                 Limited Time Offers
               </h3>
-              <p className="text-gray-600">
+              <p className=" font-serif">
                 Don’t miss out! These deals are only available for a short time.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center border-2 border-blue-300 mb-2 transform transition-transform hover:scale-105">
+            <div className=" p-6 rounded-lg shadow-lg text-center border-2 border-blue-300 mb-2 transform transition-transform hover:scale-105">
               <h3 className="text-2xl font-semibold mb-2 flex items-center justify-center">
                 <FaShoppingCart className="text-blue-500 mr-2" />
                 Best Picks
               </h3>
-              <p className="text-gray-600">
+              <p className=" font-serif">
                 Explore our hand-picked products at unbeatable prices.
               </p>
             </div>

@@ -1,26 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 import * as React from "react";
 
 import { IconSvgProps } from "@/src/types";
 
-export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
-  width,
-  height,
-  ...props
-}) => (
-  <svg
-    fill="none"
-    height={size || height}
-    viewBox="0 0 32 32"
-    width={size || width}
-    {...props}>
-    <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
-      fillRule="evenodd"
+export const Logo: React.FC<IconSvgProps> = ({}) => (
+  <div className="flex items-center gap-1 w-60 h-16  rounded-lg ">
+    <img
+      alt="logo"
+      className="w-16 h-14 p-1  rounded-full "
+      src="https://cdn-icons-png.freepik.com/512/7835/7835563.png"
     />
-  </svg>
+    <span className="font-bold text-xl text-white tracking-wide">
+      SHOPHAVEN
+    </span>
+  </div>
 );
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({

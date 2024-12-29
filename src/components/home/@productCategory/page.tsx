@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { IProduct } from "@/src/lib/utils/apitypes";
@@ -6,6 +7,8 @@ import Title from "@/src/lib/utils/Title";
 import { useState } from "react";
 import { Button, Image } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
+import CardButton from "../../UI/CardButton/CardButton";
+import ProductCard from "@/src/pages/ProductsCard/ProductsCard";
 
 // Define the Product interface to match the IProduct type used in your API.
 interface Product extends IProduct {
@@ -84,7 +87,7 @@ const Categories: React.FC = () => {
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
             <div
               key={category}
-              className={`bg-white rounded-full p-6 border-b-2 ${
+              className={`rounded-full p-2 border-b-2 ${
                 selectedCategory === category
                   ? "border-green-500 shadow-lg"
                   : "border-gray-300"
@@ -92,17 +95,14 @@ const Categories: React.FC = () => {
               onClick={() => handleCategoryClick(category)}>
               <h2 className="text-xl font-semibold">
                 {category}
+                <br />
                 <Link
                   className=""
                   href={`/all-product?category=${encodeURIComponent(category)}`}>
-                  <Button
-                    color="primary"
-                    className="from-blue-900  via-blue-700 to-blue-500  btn h-8">
-                    Show all
-                  </Button>
+                  <CardButton text="Show all" />
                 </Link>
               </h2>
-              {categoryImage ? (
+              {/* {categoryImage ? (
                 <Image
                   alt={category}
                   className="w-full h-20 object-cover rounded-full mt-4"
@@ -112,7 +112,7 @@ const Categories: React.FC = () => {
                 <div className="w-full h-20 bg-gray-200 rounded-full mt-4 flex items-center justify-center">
                   <span>No Image</span>
                 </div>
-              )}
+              )} */}
             </div>
           );
         })}
@@ -127,25 +127,15 @@ const Categories: React.FC = () => {
           {filteredProducts.length > 0 ? (
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {filteredProducts.map((product) => (
-                <div
+                <ProductCard
                   key={product.id}
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                  <img
-                    alt={product.name}
-                    className="w-full h-40 object-cover rounded-lg mb-4"
-                    src={product.imageUrl}
-                  />
-                  <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-                  <p className="text-gray-600 text-sm mb-2">
-                    {product.description}
-                  </p>
-                  <p className="text-green-600 font-bold mb-2">
-                    ${product.price.toFixed(2)}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    Stock: {product.stock}
-                  </p>
-                </div>
+                  description={product.description}
+                  id={product.id}
+                  image={product?.imageUrl || ""}
+                  link={`/product/${product.id}`}
+                  name={product.name}
+                  price={product.price}
+                />
               ))}
             </div>
           ) : (

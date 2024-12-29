@@ -1,102 +1,162 @@
 [
   {
-    "name": "Smartphone X200",
-    "description": "Latest generation smartphone with a high-resolution camera and fast processor.",
-    "price": 899.99,
-    "category": "Electronics",
+    "name": "Camping Tent",
+    "description": "Durable and weather-resistant 4-person tent for outdoor adventures.",
+    "price": 149.99,
+    "category": "Outdoor Essentials",
     "inventoryCount": 30,
     "discount": 10,
-    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-    "image": "https://www.91-cdn.com/hub/wp-content/uploads/2024/10/Vivo-X200-Pro.png?tr=w-781"
+    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXpWA4t0J5ELtsSp9GINYiUiAZ7UBGFfhhiA&s"
   },
   {
-    "name": "Gaming Laptop Pro",
-    "description": "High-performance gaming laptop with RGB keyboard and advanced cooling system.",
-    "price": 1499.99,
-    "category": "Computers",
-    "inventoryCount": 20,
-    "discount": 15,
-    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLK07-TO08Ffn5yLbvRSX2FUGavXMyzBStzw&s"
-  },
-  {
-    "name": "Fitness Tracker Band",
-    "description": "Track your workouts, heart rate, and sleep patterns with this fitness band.",
-    "price": 49.99,
-    "category": "Wearables",
-    "inventoryCount": 100,
+    "name": "Portable Stove",
+    "description": "Compact camping stove for cooking meals outdoors.",
+    "price": 79.99,
+    "category": "Outdoor Essentials",
+    "inventoryCount": 25,
     "discount": 5,
-    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-    "image": "https://cdn.mos.cms.futurecdn.net/Pk5ydxYo6ty2Q4SX9vznP6.jpg"
+    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
+    "image": "https://image.made-in-china.com/226f3j00RWfoIuPasiqA/Hitorhike-Ultralight-Portable-Mini-Outdoor-Cooking-Stove-Backpacking-Camping-Stoves-with-Piezo-Ignition.webp"
   },
   {
-    "name": "4K Ultra HD TV",
-    "description": "Large screen TV with stunning 4K resolution and built-in streaming apps.",
-    "price": 799.99,
-    "category": "Home Appliances",
-    "inventoryCount": 15,
-    "discount": 20,
-    "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-    "image": "https://www.lg.com/bd/images/tvs/md07596272/43UR7550PSC-tv-uhd-04-big-screen-mobile.jpg"
+    "name": "Sleeping Bag",
+    "description": "Comfortable and lightweight sleeping bag for cold weather.",
+    "price": 59.99,
+    "category": "Outdoor Essentials",
+    "inventoryCount": 40,
+    "discount": 8,
+    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
+    "image": "https://worldwide.golf/wp-content/uploads/2019/08/326260-2020_Titleist_Tour_Bags-dcc4a2-original-1565210795-1024x683.jpg"
+  },
+  {
+    "name": "Camping Backpack",
+    "description": "Spacious backpack for carrying all your camping gear.",
+    "price": 99.99,
+    "category": "Outdoor Essentials",
+    "inventoryCount": 35,
+    "discount": 12,
+    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/rucksack/o/h/8/90l-extra-large-travel-backpack-hiking-trekking-bag-camping-original-imagzzwmm5svjxyr.jpeg?q=20&crop=false"
+  },
+  {
+    "name": "Wireless Headphones",
+    "description": "Premium sound quality with active noise cancellation.",
+    "price": 199.99,
+    "category": "Tech & Gadgets",
+    "inventoryCount": 50,
+    "discount": 5,
+    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
+    "image": "https://static.independent.co.uk/2024/10/30/12/Wireless-headphones.jpg"
+  },
+  {
+    "name": "Smartwatch",
+    "description": "Track your fitness goals and notifications on the go.",
+    "price": 249.99,
+    "category": "Tech & Gadgets",
+    "inventoryCount": 45,
+    "discount": 10,
+    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
+    "image": "https://static-01.daraz.com.bd/p/1611c5cb044cd161abdf204e0c7fb621.jpg"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker with immersive sound.",
+    "price": 129.99,
+    "category": "Tech & Gadgets",
+    "inventoryCount": 60,
+    "discount": 15,
+    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
+    "image": "https://www.dimprice.co.uk/image/cache/catalog/products_2022/1-1-800x800.jpg"
+  },
+  {
+    "name": "Laptop Stand",
+    "description": "Adjustable ergonomic laptop stand for better comfort.",
+    "price": 39.99,
+    "category": "Tech & Gadgets",
+    "inventoryCount": 75,
+    "discount": 7,
+    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
+    "image": "https://m.media-amazon.com/images/I/71rvWjLCS1L._AC_SL1500_.jpg"
+  },
+  {
+    "name": "Casual Sneakers",
+    "description": "Stylish and comfortable sneakers for everyday wear.",
+    "price": 89.99,
+    "category": "Fashion & Lifestyle",
+    "inventoryCount": 60,
+    "discount": 12,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://sellercenter.padmazon.com.bd/assets/images/product-image/ce3c24c08e153b229ce199a34933d549.jpg"
+  },
+  {
+    "name": "Leather Handbag",
+    "description": "Elegant leather handbag for modern style.",
+    "price": 149.99,
+    "category": "Fashion & Lifestyle",
+    "inventoryCount": 20,
+    "discount": 10,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI3Vt9fKxFpEOmbGsUqAtT2VRX2JE56gGZbw&s"
+  },
+  {
+    "name": "Sunglasses",
+    "description": "UV-protection sunglasses with a modern design.",
+    "price": 49.99,
+    "category": "Fashion & Lifestyle",
+    "inventoryCount": 80,
+    "discount": 5,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5cJrs3tEgZclxgQMPYsw2D8JtxZwy74_ig&s"
+  },
+  {
+    "name": "Digital Watch",
+    "description": "Water-resistant digital watch with LED display.",
+    "price": 59.99,
+    "category": "Fashion & Lifestyle",
+    "inventoryCount": 55,
+    "discount": 8,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://images-cdn.ubuy.co.in/653b1481b443ae71897728ea-kidper-kids-digital-watch-boys-sports.jpg"
+  },
+  {
+    "name": "Non-Stick Frying Pan",
+    "description": "Durable non-stick frying pan for easy cooking.",
+    "price": 29.99,
+    "category": "Home & Kitchen",
+    "inventoryCount": 90,
+    "discount": 5,
+    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
+    "image": "https://assets.bonappetit.com/photos/5dbb1fb78afeb50008e301ca/16:9/w_2560%2Cc_limit/Basically-Non-Stick.jpg"
   },
   {
     "name": "Electric Kettle",
-    "description": "Fast-boiling electric kettle with auto shut-off and stainless steel design.",
-    "price": 29.99,
-    "category": "Kitchen Appliances",
-    "inventoryCount": 80,
-    "discount": 10,
-    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-    "image": "https://example.com/images/electric-kettle.jpg"
-  },
-  {
-    "name": "Running Shoes",
-    "description": "Comfortable and durable running shoes designed for athletes.",
-    "price": 59.99,
-    "category": "Sportswear",
-    "inventoryCount": 60,
-    "discount": 5,
-    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-    "image": "https://example.com/images/running-shoes.jpg"
-  },
-  {
-    "name": "Wireless Keyboard and Mouse",
-    "description": "Ergonomic wireless keyboard and mouse combo with long battery life.",
-    "price": 49.99,
-    "category": "Accessories",
-    "inventoryCount": 70,
-    "discount": 10,
-    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-    "image": "https://example.com/images/keyboard-mouse.jpg"
-  },
-  {
-    "name": "Portable Bluetooth Speaker",
-    "description": "Compact and waterproof Bluetooth speaker with excellent sound quality.",
-    "price": 89.99,
-    "category": "Audio",
-    "inventoryCount": 50,
-    "discount": 8,
-    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-    "image": "https://example.com/images/bluetooth-speaker.jpg"
-  },
-  {
-    "name": "Ergonomic Office Chair",
-    "description": "Adjustable office chair with lumbar support and breathable mesh back.",
-    "price": 199.99,
-    "category": "Furniture",
-    "inventoryCount": 25,
-    "discount": 12,
-    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-    "image": "https://example.com/images/office-chair.jpg"
-  },
-  {
-    "name": "Stylish Backpack",
-    "description": "Lightweight and durable backpack with multiple compartments.",
+    "description": "Fast-boil electric kettle with auto shut-off.",
     "price": 39.99,
-    "category": "Bags",
-    "inventoryCount": 150,
+    "category": "Home & Kitchen",
+    "inventoryCount": 65,
     "discount": 10,
-    "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-    "image": "https://example.com/images/backpack.jpg"
+    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
+    "image": "https://wiproappliances.com/cdn/shop/articles/Finding_Your_Perfect_Cup-_A_Guide_to_Choosing_the_Best_Electric_Kettle_for_You_aa782981-38f2-494a-98cd-931e0d11489b.webp?v=1722327627"
+  },
+  {
+    "name": "Glass Storage Containers",
+    "description": "Set of 5 glass containers for food storage.",
+    "price": 49.99,
+    "category": "Home & Kitchen",
+    "inventoryCount": 40,
+    "discount": 8,
+    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSauo6efP-xUMB-GcWdcEJPRSNgSCzt0sM54g&s"
+  },
+  {
+    "name": "Blender",
+    "description": "High-speed blender for smoothies and shakes.",
+    "price": 79.99,
+    "category": "Home & Kitchen",
+    "inventoryCount": 35,
+    "discount": 15,
+    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
+    "image": "https://nbmedia.imgix.net/NB_Family_Original-Ultra-Chrome-Pro-AK_Flip-AK_Portable-AK_Ecomm_Product-Category-Page_GreenBkgd_1426x1080_banner.jpg?auto=compress%2Cformat&ixlib=php-3.3.0&w=908&h=800&q=75"
   }
 ]

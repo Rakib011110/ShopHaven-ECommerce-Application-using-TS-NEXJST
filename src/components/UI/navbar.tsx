@@ -26,29 +26,26 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
-      className="bg-slate-500 bg-opacity-35"
-      maxWidth="xl"
-      position="sticky"
-    >
+      className="bg-slate-500  bg-opacity-35"
+      maxWidth="2xl"
+      position="sticky">
       {/* Navbar Brand */}
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">Tech Hub</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden md:flex   gap-4 justify-center md:justify-center text-center ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary text-center uppercase font-semibold "
                 )}
                 color="foreground"
-                href={item.href}
-              >
+                href={item.href}>
                 {item.label}
               </NextLink>
             </NavbarItem>
@@ -59,8 +56,7 @@ export const Navbar = () => {
       {/* User Actions */}
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
+        justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
@@ -93,8 +89,7 @@ export const Navbar = () => {
                       : "foreground"
                 }
                 href={item.href}
-                size="lg"
-              >
+                size="lg">
                 {item.label}
               </Link>
             </NavbarMenuItem>

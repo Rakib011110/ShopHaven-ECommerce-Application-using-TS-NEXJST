@@ -1,12 +1,10 @@
 "use client";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import { Link } from "@nextui-org/link";
-import { Button, Image } from "@nextui-org/react";
 import { useState } from "react";
 
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import Title from "@/src/lib/utils/Title";
+import ProductCard from "@/src/pages/ProductsCard/ProductsCard";
 
 interface Product {
   id: string;
@@ -84,6 +82,7 @@ const Products = () => {
     .sort((a: Product, b: Product) => {
       if (sortOrder === "asc") return a.price - b.price;
       if (sortOrder === "desc") return b.price - a.price;
+
       return 0;
     });
 
@@ -97,11 +96,11 @@ const Products = () => {
   if (error) return <div>Error loading products</div>;
 
   return (
-    <div className="container mx-auto p-6 mt-32">
+    <div className="container mx-auto p-6 ">
       <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} />
 
       {/* Filters */}
-      <div className="mb-4 flex gap-4">
+      <div className="mb-4 grid max-w-screen-xl mx-auto sm:grid-cols-1 lg:grid-cols-5 gap-4">
         <input
           className="border px-4 py-2 rounded"
           placeholder="Search products..."
@@ -121,7 +120,7 @@ const Products = () => {
           <option value="Home & Kitchen">Home & Kitchen</option>
         </select>
 
-        <div className="flex gap-2">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
           <input
             className="border px-4 py-2 rounded"
             placeholder="Min Price"
@@ -156,23 +155,15 @@ const Products = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {visibleProducts.map((product: Product) => (
-          <div
+          <ProductCard
             key={product.id}
-            className="border border-blue-600 rounded-xl bg-white shadow-md p-4">
-            <div className="flex justify-center">
-              <Image
-                alt={product.name}
-                className="h-40 w-full border p-3 border-blue-800 object-cover rounded-md mb-4"
-                src={product.image}
-              />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-            <p className="text-gray-600 mb-2">{product.description}</p>
-            <p className="text-lg font-bold mb-4">${product.price}</p>
-            <Link href={`/product/${product.id}`}>
-              <Button>Details</Button>
-            </Link>
-          </div>
+            description={product.description}
+            id={product.id}
+            image={product.image}
+            link={`/product/${product.id}`}
+            name={product.name}
+            price={product.price}
+          />
         ))}
       </div>
 
