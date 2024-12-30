@@ -6,6 +6,7 @@ import React from "react";
 import Zoom from "react-medium-image-zoom";
 
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
+import CardButton from "@/src/components/UI/CardButton/CardButton";
 
 const RecentProducts = () => {
   const { data, isLoading, isError } = useGetAllProductsQuery({});
@@ -60,11 +61,15 @@ const RecentProducts = () => {
             {recentProducts.map((product: any) => (
               <div
                 key={product.id}
-                className="border mx-auto border-blue-600 rounded-xl bg-white shadow-md p-4">
+                className="border mx-auto border-blue-600 rounded-xl bg-white shadow-md p-4 relative">
+                {/* New Product Tag */}
+                <span className="absolute top-1 left-7 bg-red-600 text-white text-xs font-bold py-1 px-2 rounded">
+                  New
+                </span>
                 <div className="flex justify-center">
                   <Image
                     alt={product.name}
-                    className="h-64 max-w-full  mx-auto border p-3 border-blue-800 object-cover rounded-md mb-4"
+                    className="h-64 max-w-full mx-auto border-b p-3 border-blue-800 object-cover rounded-md mb-4"
                     src={product.image || "https://via.placeholder.com/150"}
                   />
                 </div>
@@ -78,9 +83,9 @@ const RecentProducts = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <Link
-                    className="text-blue-600 underline text-sm font-medium"
+                    className="text-blue-600 text-sm font-medium"
                     href={`/product/${product.id}`}>
-                    View Details
+                    <CardButton text="Details" />
                   </Link>
                 </div>
               </div>

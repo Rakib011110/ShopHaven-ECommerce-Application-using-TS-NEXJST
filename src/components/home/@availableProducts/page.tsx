@@ -146,7 +146,7 @@ const Products = () => {
         </select>
 
         <button
-          className="border px-4 py-2 rounded bg-red-500 text-white"
+          className="border px-4 py-2 rounded font-semibold bg-[#04ecec] "
           onClick={resetFilters}>
           Clear Filters
         </button>
@@ -171,7 +171,7 @@ const Products = () => {
       {visibleCount < filteredProducts.length && (
         <div className="flex justify-center mt-6">
           <button
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[#0bf0f0] animate-bounce font-semibold px-4 py-2 rounded hover:bg-blue-700"
             onClick={loadMore}>
             Show More
           </button>

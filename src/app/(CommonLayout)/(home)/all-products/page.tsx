@@ -3,11 +3,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
-import { Button, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import Title from "@/src/lib/utils/Title";
+import CardButton from "@/src/components/UI/CardButton/CardButton";
 
 interface Product {
   id: string;
@@ -121,83 +122,85 @@ const AllProducts = () => {
     <div className="container mx-auto p-6 ">
       <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} />
 
-      {/* Filters */}
-      <div className="mb-4 flex gap-4">
-        <input
-          className="border px-4 py-2 rounded"
-          placeholder="Search products..."
-          type="text"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-        <select
-          className="border px-4 py-2 rounded"
-          value={selectedCategory || ""}
-          onChange={(e) => handleCategoryChange(e.target.value)}>
-          <option value="">All Categories</option>
-          <option value="Outdoor Essentials">Outdoor Essentials</option>
-          <option value="Tech & Gadgets">Tech & Gadgets</option>
-          <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
-          <option value="Home & Kitchen">Home & Kitchen</option>
-        </select>
-        <div className="flex gap-2">
+      <div className="grid grid-cols-4 gap-4">
+        {/* Filters */}
+        <div className="col-span-1 border p-4 rounded bg-gray-50">
           <input
-            className="border px-4 py-2 rounded"
-            placeholder="Min Price"
-            type="number"
-            value={priceRange[0]}
-            onChange={(e) => handlePriceChange(e, "min")}
+            className="border px-4 py-2 rounded w-full mb-4"
+            placeholder="Search products..."
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
           />
-          <input
-            className="border px-4 py-2 rounded"
-            placeholder="Max Price"
-            type="number"
-            value={priceRange[1]}
-            onChange={(e) => handlePriceChange(e, "max")}
-          />
-        </div>
-        <select
-          className="border px-4 py-2 rounded"
-          onChange={handleSortChange}>
-          <option value="">Sort by Price</option>
-          <option value="asc">Price: Low to High</option>
-          <option value="desc">Price: High to Low</option>
-        </select>
-        <button
-          className="border px-4 py-2 rounded bg-red-500 text-white"
-          onClick={resetFilters}>
-          Clear Filters
-        </button>
-      </div>
-
-      {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {visibleProducts.map((product: Product) => (
-          <div
-            key={product.id}
-            className="border border-blue-600 rounded-xl bg-white shadow-md p-4">
-            <div className="flex justify-center">
-              <Image
-                alt={product.name}
-                className="h-40 w-full border p-3 border-blue-800 object-cover rounded-md mb-4"
-                src={product.image}
-              />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-            <p className="text-gray-600 mb-2">{product.description}</p>
-            <p className="text-lg font-bold mb-4">${product.price}</p>
-            <div className="flex gap-2">
-              <Link href={`/product/${product.id}`}>
-                <Button
-                  color="primary"
-                  className="from-blue-900 via-blue-700 to-blue-500 ">
-                  Details
-                </Button>
-              </Link>
-              <Button onClick={() => handleCompare(product)}>Compare</Button>
-            </div>
+          <select
+            className="border px-4 py-2 rounded w-full mb-4"
+            value={selectedCategory || ""}
+            onChange={(e) => handleCategoryChange(e.target.value)}>
+            <option value="">All Categories</option>
+            <option value="Outdoor Essentials">Outdoor Essentials</option>
+            <option value="Tech & Gadgets">Tech & Gadgets</option>
+            <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
+            <option value="Home & Kitchen">Home & Kitchen</option>
+          </select>
+          <div className="flex gap-2 mb-4">
+            <input
+              className="border px-4 py-2 rounded w-full"
+              placeholder="Min Price"
+              type="number"
+              value={priceRange[0]}
+              onChange={(e) => handlePriceChange(e, "min")}
+            />
+            <input
+              className="border px-4 py-2 rounded w-full"
+              placeholder="Max Price"
+              type="number"
+              value={priceRange[1]}
+              onChange={(e) => handlePriceChange(e, "max")}
+            />
           </div>
-        ))}
+          <select
+            className="border px-4 py-2 rounded w-full mb-4"
+            onChange={handleSortChange}>
+            <option value="">Sort by Price</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+          </select>
+          <button
+            className="border px-4 py-2 rounded font-semibold bg-[#04ecec] animate-bounce font-semibol  w-full"
+            onClick={resetFilters}>
+            Clear Filters
+          </button>
+        </div>
+
+        {/* Product Grid */}
+        <div className="col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {visibleProducts.map((product: Product) => (
+            <div
+              key={product.id}
+              className="border bg-[#a5cfff] border-blue-600 rounded-xl  bg-opacity-20  shadow-md p-4">
+              <div className="flex justify-center">
+                <Image
+                  alt={product.name}
+                  className="h-40 w-full border p-3 border-blue-800 object-cover rounded-md mb-4"
+                  src={product.image}
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+              <p className="text-gray-600 mb-2">{product.description}</p>
+              <p className="text-lg font-bold mb-4">${product.price}</p>
+              <div className="flex gap-2">
+                <Link href={`/product/${product.id}`}>
+                  <CardButton text="details" />
+                </Link>
+                <button
+                  className="border px-4 py-2 rounded bg-green-600 text-white"
+                  onClick={() => handleCompare(product)}>
+                  Compare
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Show More Button */}
@@ -259,18 +262,16 @@ const AllProducts = () => {
           showWarning ? "block" : "hidden"
         }`}
         onClick={(e) => e.target === e.currentTarget && setShowWarning(false)}>
-        <div className="bg-white rounded-lg p-6 w-1/3">
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold">Warning</h3>
-            <p>You can only compare products from the same category!</p>
-          </div>
-          <div className="flex justify-end">
-            <button
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-              onClick={() => setShowWarning(false)}>
-              Close
-            </button>
-          </div>
+        <div className="bg-white rounded-lg p-6 w-1/3 text-center">
+          <h3 className="text-lg font-semibold mb-4">Warning</h3>
+          <p className="text-gray-600 mb-4">
+            You can only compare up to 3 products of the same category.
+          </p>
+          <button
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            onClick={closeWarning}>
+            Okay
+          </button>
         </div>
       </div>
     </div>

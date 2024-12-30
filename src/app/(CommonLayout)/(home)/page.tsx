@@ -11,9 +11,10 @@ import CategorySectionWoman from "@/src/components/home/@CategorySectionMan/@Cat
 export default function Home() {
   return (
     <div>
-      {/* <CreatePost /> */}
-      <Banner />
-      <div className="max-w-screen-conatainer mx-auto">
+      <div className="">
+        <Banner />
+      </div>
+      <div className="container mx-auto">
         <div>
           <Products />
         </div>

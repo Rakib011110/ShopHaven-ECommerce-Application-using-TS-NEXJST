@@ -8,9 +8,13 @@ import {
   useUnFollowShopMutation,
 } from "@/src/redux/api/followApi";
 import ShopCard from "@/src/components/home/@shopCard/ShopCard";
+import ShopBanner from "@/src/components/UI/ShopBanner";
 
 const Shop = () => {
-  const { data: shopData, isLoading } = useGetAllShopsQuery({});
+  const { data: shopData, isLoading } = useGetAllShopsQuery(
+    {},
+    { pollingInterval: 1000 }
+  );
   const [followShop] = useFollowShopMutation();
   const [unFollowShop] = useUnFollowShopMutation();
   const handleFollow = async (shopId: string) => {
@@ -49,10 +53,12 @@ const Shop = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="mx-auto p-6 bg-gray-50 min-h-screen">
-        <h1 className="text-3xl font-bold text-center mb-6">Shops</h1>
+      <div>
+        <ShopBanner />
+      </div>
 
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mx-auto p-6 bg-gray-50 min-h-screen">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-6">
           {shopData.data.map((shop: any) => (
             <ShopCard
               key={shop.id}

@@ -10,6 +10,7 @@ interface ProductCardProps {
   price: number;
   image: string;
   link: string;
+  button?: any;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -19,6 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   image,
   link,
+  button,
 }) => {
   return (
     <div>
