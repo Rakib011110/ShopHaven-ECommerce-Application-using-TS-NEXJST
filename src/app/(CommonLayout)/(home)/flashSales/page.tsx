@@ -5,6 +5,7 @@ import { Button, Image } from "@nextui-org/react";
 import React from "react";
 
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
+import CardButton from "@/src/components/UI/CardButton/CardButton";
 
 const FlashSales = () => {
   const { data, isLoading, error } = useGetAllProductsQuery({});
@@ -36,20 +37,20 @@ const FlashSales = () => {
         </div>
       </div>
       <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-lg p-6 mx-auto">
+        <div className="grid container grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6  p-6 mx-auto">
           {randomProducts.map((product: any) => (
             <div
               key={product.id}
-              className="border mx-auto border-blue-600 rounded-xl bg-white shadow-md p-4">
+              className="border mx-auto border-blue-600 rounded-xl  bg-opacity-40 bg-[#a5cfff] shadow-md p-4">
               <div>
                 <Image
                   alt={product.name}
-                  className="h-64 max-w-full mx-auto border p-3 border-blue-800 object-cover rounded-md mb-4"
+                  className="h-64 max-w-full mx-auto border-b p-3 border-blue-800 object-cover rounded-md mb-4"
                   src={product.image}
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-              <p className="text-gray-600 mb-2">{product.description}</p>
+              <p className=" mb-2">{product.description}</p>
               <p className="text-lg font-bold mb-4">${product.price}</p>
               <p className="text-lg font-bold mb-4">
                 Discount: ${product.discount}
@@ -57,8 +58,9 @@ const FlashSales = () => {
               <Link
                 className="flex justify-between"
                 href={`/product/${product.id}`}>
-                <Button>View details</Button>
-                <Button className="h-7 bg-red-500 border border-blue-400 text-white font-serif">
+                <CardButton text={"Details"} />
+
+                <Button className="h-7 bg-green-500 border border-blue-400 text-white font-serif">
                   Flash Sale
                 </Button>
               </Link>

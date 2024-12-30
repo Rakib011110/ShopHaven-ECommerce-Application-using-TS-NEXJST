@@ -1,10 +1,25 @@
+"use client";
 import Image from "next/image";
 
 import CardButton from "../../UI/CardButton/CardButton";
+import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
+import { IProduct } from "@/src/lib/utils/apitypes";
+import { useState } from "react";
+
+interface Product extends IProduct {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  category: string;
+  stock: number;
+  imageUrl: string;
+  rating: number;
+}
 
 const CategorySectionMan = () => {
   // Fake product data
-  const products = [
+  const Cardproducts = [
     {
       id: 1,
       name: "Apple iPad With Retina",
@@ -51,6 +66,37 @@ const CategorySectionMan = () => {
         "https://www.careofcarl.com/bilder/artiklar/zoom/20657711r_1.jpg?m=1669119158",
     },
   ];
+  const { data, isLoading, error } = useGetAllProductsQuery({});
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const products: Product[] =
+    (data?.data.map((product: any) => ({
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      price: product.price,
+      category: product.category,
+      imageUrl: product.image,
+      stock: product.stock,
+      rating: product.rating,
+    })) as Product[]) || [];
+
+  if (isLoading) {
+    return <div className="text-center text-lg">Loading products...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="text-center text-red-500 text-lg">
+        Failed to load products. Please try again later.
+      </div>
+    );
+  }
+
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
+    : [];
+  console.log("filteredProducts", filteredProducts);
 
   return (
     <div className="mt-20  container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
@@ -74,7 +120,7 @@ const CategorySectionMan = () => {
 
         {/* Product Cards */}
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
-          {products.slice(0, 6).map((product) => (
+          {Cardproducts.slice(0, 6).map((product) => (
             <div
               key={product.id}
               className="bg-[#a5cfff] border-blue-600  bg-opacity-30 rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
