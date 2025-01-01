@@ -77,11 +77,11 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
   return (
     <div>
       <div
-        className="relative bg-cover bg-center p-6 rounded-lg shadow-lg"
+        className="relative bg-cover bg-center p-6 bg-opacity-10 rounded-lg shadow-lg"
         style={{
           backgroundImage: `url('https://file.forms.app/sitefile/Starting%20an%20online%20retail%20business%20with%20order%20forms%20cover-min.jpg')`,
         }}>
-        <div className="flex flex-col gap-5 items-center md:flex-row bg-white bg-opacity-80 rounded-lg p-6 shadow-md">
+        <div className="flex flex-col gap-5 items-center md:flex-row  bg-[#10dafd] bg-opacity-50 rounded-lg p-6 shadow-md">
           <div className=" flex flex-col items-center md:items-start text-center md:text-left">
             <div className="w-28 h-28 rounded-full overflow-hidden border border-gray-200 shadow-sm mb-4">
               <Image
