@@ -7,6 +7,7 @@ import Footer from "@/src/components/home/@footer/Footer";
 import OurServices from "@/src/components/home/@OurServices/OurServices";
 import CategorySectionMan from "@/src/components/home/@CategorySectionMan/CategorySectionMan";
 import CategorySectionWoman from "@/src/components/home/@CategorySectionMan/@CategorySectionWoman/CategorySectionWoman";
+import NewsletterSection from "@/src/components/home/@NewsletterSection/NewsletterSection";
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
         <WhyChooseUs />
 
         <OurServices />
+        <div className="">
+          <NewsletterSection />
+        </div>
         <ScrollToTopButton />
       </div>
       <Footer />

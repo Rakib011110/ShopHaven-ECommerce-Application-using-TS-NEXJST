@@ -45,7 +45,7 @@ const OurServices = () => {
           </div>
 
           <section
-            className="relative md:w-[100%] lg:w-[100%] md:h-[100%] lg:h-[110%]   border-blue-900"
+            className="relative md:w-[100%] lg:w-[100%] md:h-[100%] lg:h-[130%]   border-blue-900"
             style={{
               aspectRatio: "1213/967",
               backgroundColor: "tomato",
