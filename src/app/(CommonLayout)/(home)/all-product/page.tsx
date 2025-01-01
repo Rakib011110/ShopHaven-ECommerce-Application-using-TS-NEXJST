@@ -37,7 +37,7 @@ const AllProducts: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      {/* <h1 className="text-2xl font-bold my-4 text-center">
+      <h1 className="text-2xl font-bold my-4 text-center">
         {category ? `Products in ${category}` : "All Products"}
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -59,7 +59,7 @@ const AllProducts: React.FC = () => {
             </Link>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

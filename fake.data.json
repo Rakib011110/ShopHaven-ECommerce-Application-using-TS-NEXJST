@@ -1,162 +1,210 @@
 [
-  {
-    "name": "Camping Tent",
-    "description": "Durable and weather-resistant 4-person tent for outdoor adventures.",
-    "price": 149.99,
-    "category": "Outdoor Essentials",
-    "inventoryCount": 30,
-    "discount": 10,
-    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXpWA4t0J5ELtsSp9GINYiUiAZ7UBGFfhhiA&s"
-  },
-  {
-    "name": "Portable Stove",
-    "description": "Compact camping stove for cooking meals outdoors.",
-    "price": 79.99,
-    "category": "Outdoor Essentials",
-    "inventoryCount": 25,
-    "discount": 5,
-    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
-    "image": "https://image.made-in-china.com/226f3j00RWfoIuPasiqA/Hitorhike-Ultralight-Portable-Mini-Outdoor-Cooking-Stove-Backpacking-Camping-Stoves-with-Piezo-Ignition.webp"
-  },
-  {
-    "name": "Sleeping Bag",
-    "description": "Comfortable and lightweight sleeping bag for cold weather.",
-    "price": 59.99,
-    "category": "Outdoor Essentials",
-    "inventoryCount": 40,
-    "discount": 8,
-    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
-    "image": "https://worldwide.golf/wp-content/uploads/2019/08/326260-2020_Titleist_Tour_Bags-dcc4a2-original-1565210795-1024x683.jpg"
-  },
-  {
-    "name": "Camping Backpack",
-    "description": "Spacious backpack for carrying all your camping gear.",
-    "price": 99.99,
-    "category": "Outdoor Essentials",
-    "inventoryCount": 35,
-    "discount": 12,
-    "shopId": "faeed22f-bce0-419d-85b6-fc4465e8022d",
-    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/rucksack/o/h/8/90l-extra-large-travel-backpack-hiking-trekking-bag-camping-original-imagzzwmm5svjxyr.jpeg?q=20&crop=false"
-  },
-  {
-    "name": "Wireless Headphones",
-    "description": "Premium sound quality with active noise cancellation.",
-    "price": 199.99,
-    "category": "Tech & Gadgets",
-    "inventoryCount": 50,
-    "discount": 5,
-    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
-    "image": "https://static.independent.co.uk/2024/10/30/12/Wireless-headphones.jpg"
-  },
-  {
-    "name": "Smartwatch",
-    "description": "Track your fitness goals and notifications on the go.",
-    "price": 249.99,
-    "category": "Tech & Gadgets",
-    "inventoryCount": 45,
-    "discount": 10,
-    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
-    "image": "https://static-01.daraz.com.bd/p/1611c5cb044cd161abdf204e0c7fb621.jpg"
-  },
-  {
-    "name": "Bluetooth Speaker",
-    "description": "Portable Bluetooth speaker with immersive sound.",
-    "price": 129.99,
-    "category": "Tech & Gadgets",
-    "inventoryCount": 60,
-    "discount": 15,
-    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
-    "image": "https://www.dimprice.co.uk/image/cache/catalog/products_2022/1-1-800x800.jpg"
-  },
-  {
-    "name": "Laptop Stand",
-    "description": "Adjustable ergonomic laptop stand for better comfort.",
-    "price": 39.99,
-    "category": "Tech & Gadgets",
-    "inventoryCount": 75,
-    "discount": 7,
-    "shopId": "83880fdf-b66b-41ee-96f1-e3a16f49d647",
-    "image": "https://m.media-amazon.com/images/I/71rvWjLCS1L._AC_SL1500_.jpg"
-  },
-  {
-    "name": "Casual Sneakers",
-    "description": "Stylish and comfortable sneakers for everyday wear.",
-    "price": 89.99,
-    "category": "Fashion & Lifestyle",
-    "inventoryCount": 60,
-    "discount": 12,
-    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
-    "image": "https://sellercenter.padmazon.com.bd/assets/images/product-image/ce3c24c08e153b229ce199a34933d549.jpg"
-  },
-  {
-    "name": "Leather Handbag",
-    "description": "Elegant leather handbag for modern style.",
-    "price": 149.99,
-    "category": "Fashion & Lifestyle",
-    "inventoryCount": 20,
-    "discount": 10,
-    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI3Vt9fKxFpEOmbGsUqAtT2VRX2JE56gGZbw&s"
-  },
-  {
-    "name": "Sunglasses",
-    "description": "UV-protection sunglasses with a modern design.",
-    "price": 49.99,
-    "category": "Fashion & Lifestyle",
-    "inventoryCount": 80,
-    "discount": 5,
-    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5cJrs3tEgZclxgQMPYsw2D8JtxZwy74_ig&s"
-  },
-  {
-    "name": "Digital Watch",
-    "description": "Water-resistant digital watch with LED display.",
-    "price": 59.99,
-    "category": "Fashion & Lifestyle",
-    "inventoryCount": 55,
-    "discount": 8,
-    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
-    "image": "https://images-cdn.ubuy.co.in/653b1481b443ae71897728ea-kidper-kids-digital-watch-boys-sports.jpg"
-  },
-  {
-    "name": "Non-Stick Frying Pan",
-    "description": "Durable non-stick frying pan for easy cooking.",
-    "price": 29.99,
-    "category": "Home & Kitchen",
-    "inventoryCount": 90,
-    "discount": 5,
-    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
-    "image": "https://assets.bonappetit.com/photos/5dbb1fb78afeb50008e301ca/16:9/w_2560%2Cc_limit/Basically-Non-Stick.jpg"
-  },
-  {
-    "name": "Electric Kettle",
-    "description": "Fast-boil electric kettle with auto shut-off.",
-    "price": 39.99,
-    "category": "Home & Kitchen",
-    "inventoryCount": 65,
-    "discount": 10,
-    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
-    "image": "https://wiproappliances.com/cdn/shop/articles/Finding_Your_Perfect_Cup-_A_Guide_to_Choosing_the_Best_Electric_Kettle_for_You_aa782981-38f2-494a-98cd-931e0d11489b.webp?v=1722327627"
-  },
-  {
-    "name": "Glass Storage Containers",
-    "description": "Set of 5 glass containers for food storage.",
-    "price": 49.99,
-    "category": "Home & Kitchen",
-    "inventoryCount": 40,
-    "discount": 8,
-    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSauo6efP-xUMB-GcWdcEJPRSNgSCzt0sM54g&s"
-  },
-  {
-    "name": "Blender",
-    "description": "High-speed blender for smoothies and shakes.",
-    "price": 79.99,
-    "category": "Home & Kitchen",
-    "inventoryCount": 35,
-    "discount": 15,
-    "shopId": "6375852d-d7a3-470f-a9db-649aec0d8d31",
-    "image": "https://nbmedia.imgix.net/NB_Family_Original-Ultra-Chrome-Pro-AK_Flip-AK_Portable-AK_Ecomm_Product-Category-Page_GreenBkgd_1426x1080_banner.jpg?auto=compress%2Cformat&ixlib=php-3.3.0&w=908&h=800&q=75"
-  }
+  [
+    {
+      "id": "1",
+      "name": "Elegant Red Dress",
+      "description": "A stunning red dress perfect for any occasion.",
+      "price": 80.0,
+      "category": "Clothing",
+      "isDeleted": false,
+      "inventoryCount": 15,
+      "discount": 10.0,
+      "shopId": "shop1",
+      "shop": {
+        "id": "shop1",
+        "name": "Fashion Boutique"
+      },
+      "reviews": [],
+      "image": "https://www.riccoindia.com/cdn/shop/products/3D7091A0-317F-4D0D-846D-B11C6E031966_580x.jpg?v=1657705803",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "orderItems": [],
+      "cartItems": [],
+      "isNew": false,
+      "isFlashSale": true,
+      "tags": ["fashion", "red", "dress"]
+    },
+    {
+      "id": "2",
+      "name": "Leather Handbag",
+      "description": "A premium leather handbag with elegant design.",
+      "price": 120.0,
+      "category": "Accessories",
+      "isDeleted": false,
+      "inventoryCount": 10,
+      "discount": 0.0,
+      "shopId": "shop2",
+      "shop": {
+        "id": "shop2",
+        "name": "Luxury Store"
+      },
+      "reviews": [],
+      "image": "https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/o/24/ec4023b8-d420-401c-ada3-25d1593077ac.jpg",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "orderItems": [],
+      "cartItems": [],
+      "isNew": false,
+      "isFlashSale": false,
+      "tags": ["handbag", "leather", "accessory"]
+    },
+    {
+      "id": "3",
+      "name": "High-Heeled Shoes",
+      "description": "Stylish high-heeled shoes for formal events.",
+      "price": 95.0,
+      "category": "Footwear",
+      "isDeleted": false,
+      "inventoryCount": 20,
+      "discount": 0.0,
+      "shopId": "shop1",
+      "shop": {
+        "id": "shop1",
+        "name": "Fashion Boutique"
+      },
+      "reviews": [],
+      "image": "https://i.pinimg.com/736x/88/be/95/88be959b8a6432069cecacd037a2278e.jpg",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "orderItems": [],
+      "cartItems": [],
+      "isNew": false,
+      "isFlashSale": false,
+      "tags": ["shoes", "heels", "footwear"]
+    },
+    {
+      "id": "4",
+      "name": "Stylish Sunglasses",
+      "description": "Trendy sunglasses with UV protection.",
+      "price": 40.0,
+      "category": "Accessories",
+      "isDeleted": false,
+      "inventoryCount": 30,
+      "discount": 0.0,
+      "shopId": "shop3",
+      "shop": {
+        "id": "shop3",
+        "name": "Sunglass World"
+      },
+      "reviews": [],
+      "image": "https://m.media-amazon.com/images/I/617yt3E9ejL._AC_UF894,1000_QL80_.jpg",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "orderItems": [],
+      "cartItems": [],
+      "isNew": true,
+      "isFlashSale": false,
+      "tags": ["sunglasses", "accessories", "UV"]
+    },
+    {
+      "id": "5",
+      "name": "Silk Scarf",
+      "description": "Luxurious silk scarf with vibrant patterns.",
+      "price": 25.0,
+      "category": "Clothing",
+      "isDeleted": false,
+      "inventoryCount": 50,
+      "discount": 5.0,
+      "shopId": "shop4",
+      "shop": {
+        "id": "shop4",
+        "name": "Silk Paradise"
+      },
+      "reviews": [],
+      "image": "https://i.etsystatic.com/52554993/r/il/0fe3c2/6117470591/il_fullxfull.6117470591_lxs4.jpg",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "orderItems": [],
+      "cartItems": [],
+      "isNew": false,
+      "isFlashSale": true,
+      "tags": ["scarf", "silk", "fashion"]
+    },
+    {
+      "id": "6",
+      "name": "Luxury Necklace",
+      "description": "Elegant necklace crafted with premium materials.",
+      "price": 200.0,
+      "category": "Jewelry",
+      "isDeleted": false,
+      "inventoryCount": 5,
+      "discount": 0.0,
+      "shopId": "shop2",
+      "shop": {
+        "id": "shop2",
+        "name": "Luxury Store"
+      },
+      "reviews": [],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07xq7I794WxniatiW8_BkE9of0Y5m7BVqig&s",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "orderItems": [],
+      "cartItems": [],
+      "isNew": false,
+      "isFlashSale": true,
+      "tags": ["necklace", "luxury", "jewelry"]
+    }
+  ],
+  [
+    {
+      "name": "Elegant Formal Shirt",
+      "description": "A crisp white shirt for formal occasions.",
+      "price": 49.99,
+      "category": "Clothing",
+      "inventoryCount": 50,
+      "discount": 10,
+      "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
+      "image": "https://i.ebayimg.com/images/g/YpMAAOSwjXRXZA7Y/s-l400.jpg"
+    },
+    {
+      "name": "Leather Oxford Shoes",
+      "description": "Premium leather shoes for a polished look.",
+      "price": 129.99,
+      "category": "Shoes",
+      "inventoryCount": 20,
+      "discount": 15,
+      "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
+      "image": "https://ssbleather.com/wp-content/uploads/2023/07/Elegant-Style-Genuine-Leather-Oxford-Shoes-SB-S470-4.jpg"
+    },
+    {
+      "name": "Classic Aviator Sunglasses",
+      "description": "Stylish aviators with UV protection.",
+      "price": 59.99,
+      "category": "Accessories",
+      "inventoryCount": 60,
+      "discount": 5,
+      "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
+      "image": "https://shop.uncrate.com/cdn/shop/products/ray-ban-aviator-total-black-5.jpg?v=1654802712"
+    },
+    {
+      "name": "Tailored Fit Blazer",
+      "description": "A tailored blazer with a modern fit.",
+      "price": 99.99,
+      "category": "Clothing",
+      "inventoryCount": 30,
+      "discount": 20,
+      "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
+      "image": "https://happygentleman.com/wp-content/uploads/2022/11/tc_velvet_blazer_black-velvet-blazer-suit-jacket-2-button-dinner-smart-casual-formal-tailored-fit-1-400x400.webp"
+    },
+    {
+      "name": "Casual Denim Jeans",
+      "description": "Versatile and comfortable denim for everyday wear.",
+      "price": 69.99,
+      "category": "Clothing",
+      "inventoryCount": 40,
+      "discount": 10,
+      "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
+      "image": "https://joop.com/medias/sys_master/images/images/h2a/hc6/9958589333534/9958589333534.jpg"
+    },
+    {
+      "name": "Leather Messenger Bag",
+      "description": "A durable and stylish bag for work or travel.",
+      "price": 89.99,
+      "category": "Accessories",
+      "inventoryCount": 25,
+      "discount": 15,
+      "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
+      "image": "https://images.othoba.com/images/thumbs/0498156_oil-pull-up-leather-executive-bag-sb-lb440.webp"
+    }
+  ]
 ]

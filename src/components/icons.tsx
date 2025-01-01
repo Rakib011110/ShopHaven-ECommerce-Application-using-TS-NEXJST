@@ -10,8 +10,8 @@ export const Logo: React.FC<IconSvgProps> = ({}) => (
       className="w-16 h-14 p-1  rounded-full "
       src="https://cdn-icons-png.freepik.com/512/7835/7835563.png"
     />
-    <span className="font-bold text-xl text-white tracking-wide">
-      SHOPHAVEN
+    <span className="font- text-2xl font-semibold font-mono text- tracking-wide">
+      SHOP <span className="text-[#29ddfd] ">HAVEN</span>
     </span>
   </div>
 );

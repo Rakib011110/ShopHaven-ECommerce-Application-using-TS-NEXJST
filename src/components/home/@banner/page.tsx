@@ -6,28 +6,23 @@ import { Image } from "@nextui-org/image";
 const Banner = () => {
   return (
     <div>
-      <div className="banner-container  mx-auto">
+      <div className="banner-container   mx-auto">
         <Swiper
+          className="max-h-[750px] w-full"
           autoplay={{ delay: 3000 }}
           loop={true}
           slidesPerView={1}
           spaceBetween={50}>
-          {/* <SwiperSlide className="w-full">
-          <Image
-            alt="Welcome To Our Shop"
-            src="https://res.cloudinary.com/dqpohzbea/image/upload/v1729428664/Navy_Black_Minimalist_Personal_Branding_Youtube_Banner_zktpy7.png"
-          />
-        </SwiperSlide> */}
           <SwiperSlide>
             <Image
               alt="Slide 2"
-              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1734329825/Gray_Red_Black_White_Dark_Red_Photo_Shopping_Black_Friday_Sale_Banner_cu8wyw.png"
+              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1735711812/Gray_Minimalist_New_Collection_Banner_2_1_aoapkd.png"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              alt="Slide 3"
-              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1734328503/Pink_White_Feminine_Shopping_Fashion_YouTube_Channel_Art_Banner_1_doq1pf.png"
+              alt="Slide 2"
+              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1735711987/Pink_White_Photocentric_Feminine_Shopping_Fashion_YouTube_Channel_Art_Banner_1_avy7cu.png"
             />
           </SwiperSlide>
         </Swiper>

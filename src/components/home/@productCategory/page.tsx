@@ -76,8 +76,8 @@ const Categories: React.FC = () => {
         bigTitle={"YOUR FAVOURITE CATEGORY"}
         smallTitle={"Click here for category"}
       />
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {uniqueCategories.map((category) => {
+      <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-6 mb-12">
+        {uniqueCategories?.slice(0, 6).map((category) => {
           const categoryImage = products.find(
             (product) => product.category === category
           )?.imageUrl;
@@ -102,17 +102,6 @@ const Categories: React.FC = () => {
                   <CardButton text="Show all" />
                 </Link>
               </h2>
-              {/* {categoryImage ? (
-                <Image
-                  alt={category}
-                  className="w-full h-20 object-cover rounded-full mt-4"
-                  src={categoryImage}
-                />
-              ) : (
-                <div className="w-full h-20 bg-gray-200 rounded-full mt-4 flex items-center justify-center">
-                  <span>No Image</span>
-                </div>
-              )} */}
             </div>
           );
         })}
@@ -126,17 +115,19 @@ const Categories: React.FC = () => {
           </h2>
           {filteredProducts.length > 0 ? (
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  description={product.description}
-                  id={product.id}
-                  image={product?.imageUrl || ""}
-                  link={`/product/${product.id}`}
-                  name={product.name}
-                  price={product.price}
-                />
-              ))}
+              {filteredProducts
+                ?.slice(0, 4)
+                .map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    description={product.description}
+                    id={product.id}
+                    image={product?.imageUrl || ""}
+                    link={`/product/${product.id}`}
+                    name={product.name}
+                    price={product.price}
+                  />
+                ))}
             </div>
           ) : (
             <div className="text-center text-gray-600">

@@ -132,6 +132,7 @@ const AllProducts = () => {
             value={searchQuery}
             onChange={handleSearchChange}
           />
+
           <select
             className="border px-4 py-2 rounded w-full mb-4"
             value={selectedCategory || ""}
@@ -142,6 +143,7 @@ const AllProducts = () => {
             <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
             <option value="Home & Kitchen">Home & Kitchen</option>
           </select>
+
           <div className="flex gap-2 mb-4">
             <input
               className="border px-4 py-2 rounded w-full"
