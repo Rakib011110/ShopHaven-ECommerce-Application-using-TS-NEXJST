@@ -42,7 +42,7 @@ export const Navbar = () => {
   const handleToggleClick = () => setIsDropdownOpen((prev) => !prev);
 
   return (
-    <div className="text-center sticky">
+    <div className="text-center top-0 z-50 sticky">
       <div>
         <NextUINavbar
           className="flex justify-between border-b border-[#20cefa] items-center max-w-screen-2xl mx-auto"
