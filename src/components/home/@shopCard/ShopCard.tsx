@@ -81,9 +81,9 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
         style={{
           backgroundImage: `url('https://file.forms.app/sitefile/Starting%20an%20online%20retail%20business%20with%20order%20forms%20cover-min.jpg')`,
         }}>
-        <div className="flex flex-col md:flex-row bg-white bg-opacity-80 rounded-lg p-6 shadow-md">
-          <div className="md:w-1/4 flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="w-60 h-60 rounded-full overflow-hidden border border-gray-200 shadow-sm mb-4">
+        <div className="flex flex-col gap-5 items-center md:flex-row bg-white bg-opacity-80 rounded-lg p-6 shadow-md">
+          <div className=" flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="w-28 h-28 rounded-full overflow-hidden border border-gray-200 shadow-sm mb-4">
               <Image
                 alt={`${shop.name} Logo`}
                 className="w-full h-full object-cover"
@@ -118,13 +118,13 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="border border-gray-300 rounded p-2 w-64 mt-5 mb-2  "
+                className="border border-gray-300 rounded p-2 w-44 mt-5 mb-2  "
               />
               <br />
               <select
                 value={priceFilter}
                 onChange={(e) => setPriceFilter(e.target.value)}
-                className="border border-gray-300 rounded w-64 p-2">
+                className="border border-gray-300 rounded w-44 p-2">
                 <option value="all">All Prices</option>
                 <option value="low">Below $50</option>
                 <option value="medium">$50 - $100</option>
@@ -140,24 +140,22 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
             </div>
           </div>
 
-          <div className="md:w-2/3 mt-6 md:mt-0">
-            {/* <h3 className="text-lg font-semibold text-gray-800 mb-4">
-              Products
-            </h3> */}
-
+          <div className="w-4/5 items-center ">
             {filteredProducts && filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredProducts.map((product: any) => (
-                  <ProductCard
-                    key={product.id}
-                    description={product.description}
-                    id={product.id}
-                    image={product.image}
-                    link={`/product/${product.id}`}
-                    name={product.name}
-                    price={product.price}
-                  />
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {filteredProducts
+                  ?.slice(0, 4)
+                  .map((product: any) => (
+                    <ProductCard
+                      key={product.id}
+                      description={product.description}
+                      id={product.id}
+                      image={product.image}
+                      link={`/product/${product.id}`}
+                      name={product.name}
+                      price={product.price}
+                    />
+                  ))}
               </div>
             ) : (
               <p className="text-sm text-gray-500">

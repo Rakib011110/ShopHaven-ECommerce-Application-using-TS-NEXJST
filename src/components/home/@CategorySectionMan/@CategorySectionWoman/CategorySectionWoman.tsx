@@ -3,6 +3,7 @@
 import CardButton from "@/src/components/UI/CardButton/CardButton";
 import { IProduct } from "@/src/lib/utils/apitypes";
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
+import { Link } from "@nextui-org/react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -163,7 +164,11 @@ const CategorySectionWoman = () => {
                 <p className="text-gray-500">${product.price.toFixed(2)}</p>
               </div>
               <div className="p-2">
-                <CardButton text="Details" />
+                <Link
+                  className="text-blue-600 text-sm font-medium"
+                  href={`/product/${product.id}`}>
+                  <CardButton text="Details" />
+                </Link>
               </div>
             </div>
           ))}

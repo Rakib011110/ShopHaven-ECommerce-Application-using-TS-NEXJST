@@ -29,6 +29,11 @@ const LoginPage = () => {
       router.push(redirect || "/");
     }
   }, [isSuccess, redirect, router]);
+  const credentials = {
+    vendor: "Email: vendor@gmail.com | Password: 123456",
+    admin: "Email: admin@gmail.com | Password: 123456",
+    user: "Email: customer@gmail.com | Password: 123456",
+  };
 
   return (
     <>
@@ -36,11 +41,12 @@ const LoginPage = () => {
       <div className="flex h-[calc(100vh-200px)] w-full flex-col items-center justify-center bg-gradient-to-b from-gray-200 via-gray-300 to-gray-100">
         <div className="shadow-lg rounded-lg p-8 bg-white w-[90%] max-w-[500px]">
           <h3 className="my-4 text-3xl font-bold text-gray-900 text-center">
-            Welcome to TechInsight
+            Welcome to ShopHaven
           </h3>
           <p className="mb-6 text-center text-gray-600">
             Sign in to your account
           </p>
+
           <TIForm
             resolver={zodResolver(loginValidationSchema)}
             onSubmit={onSubmit}>
@@ -57,6 +63,24 @@ const LoginPage = () => {
               Login
             </Button>
           </TIForm>
+          <div className="  rounded-lg mb-5">
+            <h3 className="text-md font- text-gray-900 text-center mb-6">
+              Hover to View Credentials
+            </h3>
+
+            <div className="flex justify-between">
+              {Object.entries(credentials).map(([key, value]) => (
+                <div key={key} className="group relative w-1/3 px-1">
+                  <button className=" px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-all focus:outline-none ">
+                    {key.charAt(0).toUpperCase() + key.slice(1)} Login
+                  </button>
+                  <div className="absolute left-0 right-0 top-full mt-2 p-2 bg-[#1cd7f8] text-gray-700 text-sm rounded-md  opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {value}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="text-center mt-4">
             <span className="text-gray-600">Do not have an account?</span>{" "}
             <Link

@@ -4,6 +4,7 @@ import CardButton from "../../UI/CardButton/CardButton";
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import { IProduct } from "@/src/lib/utils/apitypes";
 import { useState } from "react";
+import { Link } from "@nextui-org/react";
 
 interface Product extends IProduct {
   id: string;
@@ -100,7 +101,11 @@ const CategorySectionMan = () => {
                 <p className="text-gray-500">${product.price.toFixed(2)}</p>
               </div>
               <div className="p-2">
-                <CardButton text="Details" />
+                <Link
+                  className="text-blue-600 text-sm font-medium"
+                  href={`/product/${product.id}`}>
+                  <CardButton text="Details" />
+                </Link>
               </div>
             </div>
           ))}

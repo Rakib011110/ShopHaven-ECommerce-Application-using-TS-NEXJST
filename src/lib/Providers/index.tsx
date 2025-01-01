@@ -26,7 +26,9 @@ export function Providers({ children, themeProps }: ProvidersProps) {
       <UserProvider>
         <NextUIProvider navigate={router.push}>
           <Toaster />
-          <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+          <NextThemesProvider defaultTheme="light" {...themeProps}>
+            {children}
+          </NextThemesProvider>
         </NextUIProvider>
       </UserProvider>
     </QueryClientProvider>
