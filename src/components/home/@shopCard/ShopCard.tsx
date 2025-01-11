@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
-import { Divider } from "@nextui-org/divider";
 import { Image } from "@nextui-org/image";
 import {
   Button,
@@ -20,7 +18,6 @@ import {
 import ProductCard from "@/src/pages/ProductsCard/ProductsCard";
 
 const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
-  console.log(shop);
   const [addToCart] = useAddItemToCartMutation();
   const { data: cart } = useGetCartItemsQuery({});
   const [showWarning, setShowWarning] = useState(false);

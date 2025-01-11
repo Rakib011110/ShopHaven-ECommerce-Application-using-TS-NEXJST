@@ -1,210 +1,52 @@
 [
-  [
-    {
-      "id": "1",
-      "name": "Elegant Red Dress",
-      "description": "A stunning red dress perfect for any occasion.",
-      "price": 80.0,
-      "category": "Clothing",
-      "isDeleted": false,
-      "inventoryCount": 15,
-      "discount": 10.0,
-      "shopId": "shop1",
-      "shop": {
-        "id": "shop1",
-        "name": "Fashion Boutique"
-      },
-      "reviews": [],
-      "image": "https://www.riccoindia.com/cdn/shop/products/3D7091A0-317F-4D0D-846D-B11C6E031966_580x.jpg?v=1657705803",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
-      "orderItems": [],
-      "cartItems": [],
-      "isNew": false,
-      "isFlashSale": true,
-      "tags": ["fashion", "red", "dress"]
-    },
-    {
-      "id": "2",
-      "name": "Leather Handbag",
-      "description": "A premium leather handbag with elegant design.",
-      "price": 120.0,
-      "category": "Accessories",
-      "isDeleted": false,
-      "inventoryCount": 10,
-      "discount": 0.0,
-      "shopId": "shop2",
-      "shop": {
-        "id": "shop2",
-        "name": "Luxury Store"
-      },
-      "reviews": [],
-      "image": "https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/o/24/ec4023b8-d420-401c-ada3-25d1593077ac.jpg",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
-      "orderItems": [],
-      "cartItems": [],
-      "isNew": false,
-      "isFlashSale": false,
-      "tags": ["handbag", "leather", "accessory"]
-    },
-    {
-      "id": "3",
-      "name": "High-Heeled Shoes",
-      "description": "Stylish high-heeled shoes for formal events.",
-      "price": 95.0,
-      "category": "Footwear",
-      "isDeleted": false,
-      "inventoryCount": 20,
-      "discount": 0.0,
-      "shopId": "shop1",
-      "shop": {
-        "id": "shop1",
-        "name": "Fashion Boutique"
-      },
-      "reviews": [],
-      "image": "https://i.pinimg.com/736x/88/be/95/88be959b8a6432069cecacd037a2278e.jpg",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
-      "orderItems": [],
-      "cartItems": [],
-      "isNew": false,
-      "isFlashSale": false,
-      "tags": ["shoes", "heels", "footwear"]
-    },
-    {
-      "id": "4",
-      "name": "Stylish Sunglasses",
-      "description": "Trendy sunglasses with UV protection.",
-      "price": 40.0,
-      "category": "Accessories",
-      "isDeleted": false,
-      "inventoryCount": 30,
-      "discount": 0.0,
-      "shopId": "shop3",
-      "shop": {
-        "id": "shop3",
-        "name": "Sunglass World"
-      },
-      "reviews": [],
-      "image": "https://m.media-amazon.com/images/I/617yt3E9ejL._AC_UF894,1000_QL80_.jpg",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
-      "orderItems": [],
-      "cartItems": [],
-      "isNew": true,
-      "isFlashSale": false,
-      "tags": ["sunglasses", "accessories", "UV"]
-    },
-    {
-      "id": "5",
-      "name": "Silk Scarf",
-      "description": "Luxurious silk scarf with vibrant patterns.",
-      "price": 25.0,
-      "category": "Clothing",
-      "isDeleted": false,
-      "inventoryCount": 50,
-      "discount": 5.0,
-      "shopId": "shop4",
-      "shop": {
-        "id": "shop4",
-        "name": "Silk Paradise"
-      },
-      "reviews": [],
-      "image": "https://i.etsystatic.com/52554993/r/il/0fe3c2/6117470591/il_fullxfull.6117470591_lxs4.jpg",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
-      "orderItems": [],
-      "cartItems": [],
-      "isNew": false,
-      "isFlashSale": true,
-      "tags": ["scarf", "silk", "fashion"]
-    },
-    {
-      "id": "6",
-      "name": "Luxury Necklace",
-      "description": "Elegant necklace crafted with premium materials.",
-      "price": 200.0,
-      "category": "Jewelry",
-      "isDeleted": false,
-      "inventoryCount": 5,
-      "discount": 0.0,
-      "shopId": "shop2",
-      "shop": {
-        "id": "shop2",
-        "name": "Luxury Store"
-      },
-      "reviews": [],
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07xq7I794WxniatiW8_BkE9of0Y5m7BVqig&s",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
-      "orderItems": [],
-      "cartItems": [],
-      "isNew": false,
-      "isFlashSale": true,
-      "tags": ["necklace", "luxury", "jewelry"]
-    }
-  ],
-  [
-    {
-      "name": "Elegant Formal Shirt",
-      "description": "A crisp white shirt for formal occasions.",
-      "price": 49.99,
-      "category": "Clothing",
-      "inventoryCount": 50,
-      "discount": 10,
-      "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-      "image": "https://i.ebayimg.com/images/g/YpMAAOSwjXRXZA7Y/s-l400.jpg"
-    },
-    {
-      "name": "Leather Oxford Shoes",
-      "description": "Premium leather shoes for a polished look.",
-      "price": 129.99,
-      "category": "Shoes",
-      "inventoryCount": 20,
-      "discount": 15,
-      "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-      "image": "https://ssbleather.com/wp-content/uploads/2023/07/Elegant-Style-Genuine-Leather-Oxford-Shoes-SB-S470-4.jpg"
-    },
-    {
-      "name": "Classic Aviator Sunglasses",
-      "description": "Stylish aviators with UV protection.",
-      "price": 59.99,
-      "category": "Accessories",
-      "inventoryCount": 60,
-      "discount": 5,
-      "shopId": "6d0a1c48-24e0-4dc8-a02f-f42f19123fe2",
-      "image": "https://shop.uncrate.com/cdn/shop/products/ray-ban-aviator-total-black-5.jpg?v=1654802712"
-    },
-    {
-      "name": "Tailored Fit Blazer",
-      "description": "A tailored blazer with a modern fit.",
-      "price": 99.99,
-      "category": "Clothing",
-      "inventoryCount": 30,
-      "discount": 20,
-      "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-      "image": "https://happygentleman.com/wp-content/uploads/2022/11/tc_velvet_blazer_black-velvet-blazer-suit-jacket-2-button-dinner-smart-casual-formal-tailored-fit-1-400x400.webp"
-    },
-    {
-      "name": "Casual Denim Jeans",
-      "description": "Versatile and comfortable denim for everyday wear.",
-      "price": 69.99,
-      "category": "Clothing",
-      "inventoryCount": 40,
-      "discount": 10,
-      "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-      "image": "https://joop.com/medias/sys_master/images/images/h2a/hc6/9958589333534/9958589333534.jpg"
-    },
-    {
-      "name": "Leather Messenger Bag",
-      "description": "A durable and stylish bag for work or travel.",
-      "price": 89.99,
-      "category": "Accessories",
-      "inventoryCount": 25,
-      "discount": 15,
-      "shopId": "5e42a1dd-191b-4a12-a681-d68c3b5526f5",
-      "image": "https://images.othoba.com/images/thumbs/0498156_oil-pull-up-leather-executive-bag-sb-lb440.webp"
-    }
-  ]
+  {
+    "name": "Leather Handbag",
+    "description": "A premium leather handbag with multiple compartments, ideal for everyday use.",
+    "price": 79.99,
+    "category": "Accessories",
+    "inventoryCount": 50,
+    "discount": 10,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://m.media-amazon.com/images/I/61RSyB+kbzL._AC_SL1200_.jpg"
+  },
+  {
+    "name": "Classic Oxford Shoes for Men",
+    "description": "Elegant leather Oxford shoes designed for formal and professional settings.",
+    "price": 129.99,
+    "category": "Shoes",
+    "inventoryCount": 30,
+    "discount": 15,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://i5.walmartimages.com/seo/Bruno-Marc-Men-s-Classic-Oxford-Shoes-Casual-Business-Walking-Shoes-For-Men-Modern-Lace-Up-Formal-Dress-Shoes-PRINCE-6-BLACK-Size-12_07fcd824-ca66-4a71-a5cb-03c9159af810.07e2921ee30610a120a105577db0101e.jpeg"
+  },
+  {
+    "name": "Stylish Heels for Women",
+    "description": "Sophisticated high heels perfect for evening wear or formal occasions.",
+    "price": 89.99,
+    "category": "Shoes",
+    "inventoryCount": 40,
+    "discount": 10,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://www.merkis.com.bd/wp-content/uploads/2023/04/617-02.jpg"
+  },
+  {
+    "name": "Sporty Sneakers for Men",
+    "description": "Comfortable and durable sneakers designed for sports and casual wear.",
+    "price": 69.99,
+    "category": "Shoes",
+    "inventoryCount": 100,
+    "discount": 5,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://www.batabd.com/cdn/shop/products/1_11568c6a-24ea-4185-a117-3a5ab3c8cdba_1024x1024.jpg?v=1735704488"
+  },
+  {
+    "name": "Casual Slip-On Shoes for Women",
+    "description": "Easy-to-wear slip-on shoes for casual outings or daily wear.",
+    "price": 49.99,
+    "category": "Shoes",
+    "inventoryCount": 70,
+    "discount": 10,
+    "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
+    "image": "https://www.coopersofstortford.co.uk/images/products/medium/L570_COi_2.jpg"
+  }
 ]
