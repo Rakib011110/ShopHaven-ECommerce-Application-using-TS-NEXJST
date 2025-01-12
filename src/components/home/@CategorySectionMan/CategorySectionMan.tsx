@@ -56,7 +56,7 @@ const CategorySectionMan = () => {
   };
 
   return (
-    <div className="mt-20 max-h-[800px] container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
+    <div className="mt-20 mb-10 container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
       {/* Left Section: Product Cards */}
       <div className="flex-[1.7] flex flex-col">
         {/* Title */}

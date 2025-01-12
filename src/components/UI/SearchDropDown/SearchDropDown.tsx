@@ -34,7 +34,9 @@ const SearchDropdown = () => {
         </div>
 
         {/* Search Button */}
-        <CardButton text="Search" />
+        <div className="hidden md:block">
+          <CardButton text="Search" />
+        </div>
       </div>
     </form>
   );

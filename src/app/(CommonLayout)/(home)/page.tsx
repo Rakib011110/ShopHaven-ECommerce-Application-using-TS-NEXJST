@@ -16,13 +16,9 @@ export default function Home() {
         <Banner />
       </div>
       <div className="container mx-auto">
-        <div>
-          <Products />
-        </div>
+        <div>{/* <Products /> */}</div>
 
-        <div>
-          <Categories />
-        </div>
+        <div>{/* <Categories /> */}</div>
         <CategorySectionMan />
         <CategorySectionWoman />
 

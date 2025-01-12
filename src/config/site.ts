@@ -32,19 +32,14 @@ export const siteConfig = {
       href: "/flashSales",
     },
 
-    {
-      label: "📞Contact Us",
-      href: "/contact",
-    },
+    // {
+    //   label: "📞Contact Us",
+    //   href: "/contact",
+    // },
     // {
     //   label: "About Us",
     //   href: "/about",
     // },
-
-    {
-      label: "🛒Cart",
-      href: "/cart",
-    },
   ],
   navMenuItems: [
     {

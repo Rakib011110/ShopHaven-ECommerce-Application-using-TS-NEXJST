@@ -106,7 +106,7 @@ const CategorySectionWoman = () => {
   // ];
 
   return (
-    <div className="mt-40  max-h-[800px] container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
+    <div className="mt- mb-10 container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
       {/* Left Section: Hero Model */}
       <div className="flex-1">
         <div className="w-full h-full">
@@ -146,7 +146,7 @@ const CategorySectionWoman = () => {
 
         {/* Product Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
-          {filteredProducts.slice(0, 6).map((product) => (
+          {filteredProducts.slice(4, 10).map((product) => (
             <div
               key={product.id}
               className="bg-[#a5cfff] border-blue-600 bg-opacity-30 rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
