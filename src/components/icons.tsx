@@ -4,10 +4,10 @@ import * as React from "react";
 import { IconSvgProps } from "@/src/types";
 
 export const Logo: React.FC<IconSvgProps> = ({}) => (
-  <div className="flex items-center gap-1 w-60 h-16  rounded-lg ">
+  <div className="flex items-center gap-1 w-54 h-14  rounded-lg ">
     <img
       alt="logo"
-      className="w-16 h-14 p-1  rounded-full "
+      className="w-14 h-12 rounded-full  "
       src="https://cdn-icons-png.freepik.com/512/7835/7835563.png"
     />
     <span className="font- text-2xl font-semibold font-mono text- tracking-wide">

@@ -8,23 +8,31 @@ import OurServices from "@/src/components/home/@OurServices/OurServices";
 import CategorySectionMan from "@/src/components/home/@CategorySectionMan/CategorySectionMan";
 import CategorySectionWoman from "@/src/components/home/@CategorySectionMan/@CategorySectionWoman/CategorySectionWoman";
 import NewsletterSection from "@/src/components/home/@NewsletterSection/NewsletterSection";
+import BlogComponent from "../../../components/home/BlogComponent/BlogComponent";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <div className="">
         <Banner />
       </div>
       <div className="container mx-auto">
-        <div>{/* <Products /> */}</div>
+        <div>
+          <Products />
+        </div>
 
-        <div>{/* <Categories /> */}</div>
+        <div>
+          <Categories />
+        </div>
         <CategorySectionMan />
         <CategorySectionWoman />
 
         <WhyChooseUs />
 
         <OurServices />
+        <div>
+          <BlogComponent />
+        </div>
         <div className="">
           <NewsletterSection />
         </div>

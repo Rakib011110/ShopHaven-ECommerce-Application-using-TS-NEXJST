@@ -35,7 +35,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <div className="flex flex-col mb-20 items-center bg-gradient-to-r border-4 border-blue-800  py-12 px-6 rounded-lg shadow-lg">
+    <div className="flex bg-slate-300  bg-opacity-40 flex-col mb-20 items-center bg-gradient-to-r border-4 border-blue-800  py-12 px-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4 uppercase">
         Subscribe to Our Newsletter
       </h2>

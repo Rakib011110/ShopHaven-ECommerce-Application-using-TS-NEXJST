@@ -100,58 +100,64 @@ const Products = () => {
       <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} />
 
       {/* Filters */}
-      <div className="mb-4 grid max-w-screen-xl mx-auto sm:grid-cols-1 lg:grid-cols-5 gap-4">
-        <input
-          className="border px-4 py-2 rounded"
-          placeholder="Search products..."
-          type="text"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-
-        <select
-          className="border px-4 py-2 rounded"
-          value={selectedCategory || ""}
-          onChange={(e) => handleCategoryChange(e.target.value)}>
-          <option value="">All Categories</option>
-          <option value="Outdoor Essentials">Outdoor Essentials</option>
-          <option value="Tech & Gadgets">Tech & Gadgets</option>
-          <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
-          <option value="Home & Kitchen">Home & Kitchen</option>
-        </select>
-
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="mb-8 max-w-screen-2xl mx-auto p-4 bg-white shadow-md rounded-lg">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-5 gap-4 items-center">
+          {/* Search Input */}
           <input
-            className="border px-4 py-2 rounded"
-            placeholder="Min Price"
-            type="number"
-            value={priceRange[0]}
-            onChange={(e) => handlePriceChange(e, "min")}
+            className="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
+            placeholder="Search products..."
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchChange}
           />
-          <input
-            className="border px-4 py-2 rounded"
-            placeholder="Max Price"
-            type="number"
-            value={priceRange[1]}
-            onChange={(e) => handlePriceChange(e, "max")}
-          />
+
+          {/* Category Dropdown */}
+          <select
+            className="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
+            value={selectedCategory || ""}
+            onChange={(e) => handleCategoryChange(e.target.value)}>
+            <option value="">All Categories</option>
+            <option value="Outdoor Essentials">Outdoor Essentials</option>
+            <option value="Tech & Gadgets">Tech & Gadgets</option>
+            <option value="Fashion & Lifestyle">Fashion & Lifestyle</option>
+            <option value="Home & Kitchen">Home & Kitchen</option>
+          </select>
+
+          {/* Price Range Inputs */}
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-2">
+            <input
+              className="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              placeholder="Min Price"
+              type="number"
+              value={priceRange[0]}
+              onChange={(e) => handlePriceChange(e, "min")}
+            />
+            <input
+              className="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              placeholder="Max Price"
+              type="number"
+              value={priceRange[1]}
+              onChange={(e) => handlePriceChange(e, "max")}
+            />
+          </div>
+
+          {/* Sort Dropdown */}
+          <select
+            className="border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
+            onChange={handleSortChange}>
+            <option value="">Sort by Price</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+          </select>
+
+          {/* Clear Filters Button */}
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 transition-all"
+            onClick={resetFilters}>
+            Clear Filters
+          </button>
         </div>
-
-        <select
-          className="border px-4 py-2 rounded"
-          onChange={handleSortChange}>
-          <option value="">Sort by Price</option>
-          <option value="asc">Price: Low to High</option>
-          <option value="desc">Price: High to Low</option>
-        </select>
-
-        <button
-          className="border px-4 py-2 rounded font-semibold bg-[#04ecec] "
-          onClick={resetFilters}>
-          Clear Filters
-        </button>
       </div>
-
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {visibleProducts.map((product: Product) => (

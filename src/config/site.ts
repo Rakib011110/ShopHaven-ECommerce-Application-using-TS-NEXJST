@@ -31,6 +31,10 @@ export const siteConfig = {
       label: "Flash Sale",
       href: "/flashSales",
     },
+    {
+      label: "Blog",
+      href: "/blog",
+    },
 
     // {
     //   label: "📞Contact Us",

@@ -149,7 +149,7 @@ const CategorySectionWoman = () => {
           {filteredProducts.slice(4, 10).map((product) => (
             <div
               key={product.id}
-              className="bg-[#a5cfff] border-blue-600 bg-opacity-30 rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
+              className="bg-[#FFC0CB]  bg-opacity-25 border-blue-600  rounded-lg shadow hover:shadow-lg transition h-full flex flex-col">
               <div className="relative p-1 rounded-lg mx-auto">
                 <Image
                   alt={product.name}

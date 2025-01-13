@@ -26,11 +26,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div>
       <div
         key={id}
-        className="border bg-[#a5cfff] border-blue-600 rounded-xl  bg-opacity-20 shadow-md p-4">
-        <div className="flex justify-center">
+        className="border  border-blue-600 rounded-xl   shadow-md p-4">
+        <div className="flex justify-center ">
           <Image
             alt={name}
-            className="h-40 w-full p-1 border-b  border-blue-800 object-cover rounded-md mb-4"
+            className="h-48 w-64 border-b  border-blue-800 object-cover rounded-md mb-4"
             src={image}
           />
         </div>

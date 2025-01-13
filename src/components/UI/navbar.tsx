@@ -45,7 +45,7 @@ export const Navbar = () => {
     <div className="text-center top-0 z-50 sticky">
       {/* Top Bar */}
       <div className="bg-gray-800 hidden md:block text-white py-2 text-sm">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-10 flex justify-between items-center">
           <div className="flex gap-4 items-center">
             <span className="font-bold">Hotline:</span>
             <a
@@ -122,7 +122,7 @@ export const Navbar = () => {
 
       {/* Category Navbar */}
       <NextUINavbar
-        className="bg-[#20cefa] h- rounded-lg h-14 bg-opacity-35"
+        className="bg-[#20cefa] h- rounded-lg h-14 bg-opacity-70"
         maxWidth="2xl"
         position="sticky">
         <NavbarContent>

@@ -9,6 +9,8 @@ import { Link } from "@nextui-org/link";
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import Title from "@/src/lib/utils/Title";
 import CardButton from "@/src/components/UI/CardButton/CardButton";
+import ProductsBanner from "@/src/components/UI/ProductsBanner/ProductsBanner";
+import ShopBanner from "@/src/components/UI/ShopBanner";
 
 interface Product {
   id: string;
@@ -120,7 +122,16 @@ const AllProducts = () => {
 
   return (
     <div className="container mx-auto p-6 ">
-      <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} />
+      {/* <Title bigTitle={"OUR PRODUCT"} smallTitle={"Choose your products"} /> */}
+
+      <div>
+        {/* <ProductsBanner
+          title=""
+          subtitle=""
+          backgroundImage="https://img.freepik.com/premium-vector/big-sale-banner-template-design-web-social-media_39705-268.jpg"
+        /> */}
+        <ShopBanner />
+      </div>
 
       <div className="grid grid-cols-4 gap-4">
         {/* Filters */}
