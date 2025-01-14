@@ -8,6 +8,7 @@ import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import { useUser } from "@/src/context/user.provider";
 import { useCreateReviewMutation } from "@/src/redux/api/ReviewAPI";
 import { useAddItemToCartMutation } from "@/src/redux/api/cartApi"; // Import the cart hook
+import CardButton from "@/src/components/UI/CardButton/CardButton";
 
 const ProductDetails = ({ productId }: { productId: string }) => {
   const { user } = useUser();
@@ -75,29 +76,81 @@ const ProductDetails = ({ productId }: { productId: string }) => {
 
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg">
-      <div className="flex flex-col lg:flex-row gap-6">
-        <Image
-          alt={product?.name}
-          className="w-full lg:max-w-lg h-auto rounded-lg"
-          src={product?.image}
-        />
-        <div className="flex flex-col flex-1">
-          <h2 className="text-2xl font-bold">{product?.name}</h2>
-          <p className="text-gray-600 mt-2">{product?.description}</p>
-          <p className="text-green-600 font-bold text-lg mt-4">
-            ${product.price}
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Category: <span className="font-semibold">{product?.category}</span>
-          </p>
+      <div className="flex flex-col lg:flex-row gap-10 bg-gray-50 border border-gray-200 rounded-lg p-6">
+        {/* Product Image */}
+        <div className="w-full lg:max-w-md">
+          <Image
+            alt={product?.name}
+            className="w-full h-auto rounded-lg object-cover border border-gray-300"
+            src={product?.image || "https://via.placeholder.com/300"}
+          />
+          {/* Flash Sale Badge */}
+          {product?.isFlashSale && product?.flashSaleEndAt && (
+            <div className="mt-4 text-center text-white bg-red-500 py-1 px-4 rounded-lg text-sm font-bold">
+              Flash Sale Ends:{" "}
+              {new Date(product?.flashSaleEndAt).toLocaleString()}
+            </div>
+          )}
+        </div>
+
+        {/* Product Information */}
+        <div className="flex flex-col flex-1 space-y-6">
+          {/* Product Title and Description */}
+          <h2 className="text-3xl font-bold text-gray-800">{product?.name}</h2>
+          <p className="text-gray-600 text-lg">{product?.description}</p>
+
+          {/* Pricing and Discount */}
+          <div className="text-lg space-y-2">
+            <p className="text-green-600 font-bold text-2xl">
+              ${product?.price.toFixed(2)}
+            </p>
+            {product?.discount > 0 && (
+              <p className="text-sm text-gray-500">
+                Discount:{" "}
+                <span className="text-red-600 font-semibold">
+                  ${product?.discount.toFixed(2)}
+                </span>
+              </p>
+            )}
+          </div>
+
+          {/* Category and Inventory */}
+          <div className="space-y-1">
+            <p className="text-sm text-gray-500">
+              Category:{" "}
+              <span className="font-semibold text-gray-700">
+                {product?.category}
+              </span>
+            </p>
+            <p className="text-sm text-gray-500">
+              Availability:{" "}
+              <span
+                className={`font-semibold ${
+                  product?.inventoryCount > 0
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}>
+                {product?.inventoryCount > 0
+                  ? `In Stock (${product?.inventoryCount} available)`
+                  : "Out of Stock"}
+              </span>
+            </p>
+          </div>
+
+          {/* Shop Details */}
           <Link
-            className="text-blue-500 hover:underline mt-4"
+            className="text-blue-500 hover:underline text-sm font-medium"
             href={`/shop-details/${product?.shopId}`}>
-            Visit shop
+            View more products from this shop
           </Link>
-          <div className="mt-4">
-            {/* Add to Cart Button */}
-            <Button color="success" onClick={handleAddToCart}>
+
+          {/* Add to Cart Button */}
+          <div>
+            <Button
+              color="success"
+              isDisabled={product?.inventoryCount === 0}
+              onClick={handleAddToCart}
+              className="w-full py-2 rounded-md text-white bg-green-600 hover:bg-green-700">
               Add to Cart
             </Button>
           </div>
@@ -178,10 +231,7 @@ const ProductDetails = ({ productId }: { productId: string }) => {
               <Link
                 className="flex justify-between"
                 href={`/product/${product.id}`}>
-                <Button>View details</Button>
-                <Button className="h-7 bg-red-500 border border-blue-400 text-white font-serif ">
-                  Flash sales
-                </Button>
+                <CardButton text="Details" />
               </Link>
             </div>
           ))}

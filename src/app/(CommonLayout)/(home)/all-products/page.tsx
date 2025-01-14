@@ -11,6 +11,7 @@ import Title from "@/src/lib/utils/Title";
 import CardButton from "@/src/components/UI/CardButton/CardButton";
 import ProductsBanner from "@/src/components/UI/ProductsBanner/ProductsBanner";
 import ShopBanner from "@/src/components/UI/ShopBanner";
+import Loading from "@/src/components/UI/Loading/Loading";
 
 interface Product {
   id: string;
@@ -117,8 +118,20 @@ const AllProducts = () => {
 
   const closeWarning = () => setShowWarning(false);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading products</div>;
+  if (isLoading)
+    return (
+      <div>
+        {" "}
+        <Loading />
+      </div>
+    );
+  if (error)
+    return (
+      <div>
+        {" "}
+        <Loading />
+      </div>
+    );
 
   return (
     <div className="container mx-auto p-6 ">
@@ -130,7 +143,28 @@ const AllProducts = () => {
           subtitle=""
           backgroundImage="https://img.freepik.com/premium-vector/big-sale-banner-template-design-web-social-media_39705-268.jpg"
         /> */}
-        <ShopBanner />
+        {/* <ShopBanner /> */}
+
+        <div className=" mt-5 mx-auto flex justify-between items-center mb-8">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800">
+              All <span className="text-blue-600">roducts</span>
+            </h2>
+            <p className="text-gray-500 text-sm">
+              Discover the most recent products added to our store.
+            </p>
+          </div>
+          <div>
+            {/* Search Input */}
+            <input
+              className="border px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              placeholder="Search products..."
+              type="text"
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-4 gap-4">
@@ -206,7 +240,7 @@ const AllProducts = () => {
                   <CardButton text="details" />
                 </Link>
                 <button
-                  className="border px-4 py-2 rounded bg-green-600 text-white"
+                  className="border px-4 py-2 rounded bg-blue-600 text-white"
                   onClick={() => handleCompare(product)}>
                   Compare
                 </button>

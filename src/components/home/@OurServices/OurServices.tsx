@@ -6,7 +6,7 @@ import { FaBoxes, FaDollarSign, FaHeadset } from "react-icons/fa";
 const OurServices = () => {
   return (
     <div>
-      <div className=" max-w-screen-2xl mx-auto mt-20 mb-5">
+      <div className=" max-w-screen-2xl mx-auto mt-24 mb-5">
         <div className=" justify-center items-center gap-5 max-w-screen-2xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 ">
           <div className="   rounded-lg  ">
             <div className="space-y-3">

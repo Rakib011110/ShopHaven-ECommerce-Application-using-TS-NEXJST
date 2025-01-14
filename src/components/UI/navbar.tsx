@@ -97,7 +97,7 @@ export const Navbar = () => {
 
               <div>
                 <NavbarContent
-                  className="basis-1/5 sm:basis-full"
+                  className="basis-1/5 bg-white sm:basis-full"
                   justify="start"
                 />
               </div>

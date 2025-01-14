@@ -9,6 +9,7 @@ import {
 } from "@/src/redux/api/followApi";
 import ShopCard from "@/src/components/home/@shopCard/ShopCard";
 import ShopBanner from "@/src/components/UI/ShopBanner";
+import Loading from "@/src/components/UI/Loading/Loading";
 
 const Shop = () => {
   const { data: shopData, isLoading } = useGetAllShopsQuery(
@@ -39,7 +40,10 @@ const Shop = () => {
 
   if (isLoading) {
     return (
-      <div className="text-center text-lg text-blue-600">Loading shops...</div>
+      <div className="text-center text-lg text-blue-600">
+        {" "}
+        <Loading />
+      </div>
     );
   }
 
@@ -53,9 +57,7 @@ const Shop = () => {
 
   return (
     <div className="container mx-auto">
-      <div>
-        <ShopBanner />
-      </div>
+      <div>{/* <ShopBanner /> */}</div>
 
       <div className="mx-auto p-6 bg-gray-50 min-h-screen">
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-6">

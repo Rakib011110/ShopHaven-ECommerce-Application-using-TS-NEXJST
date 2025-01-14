@@ -2,11 +2,11 @@ import React from "react";
 
 const ShopBanner = () => {
   return (
-    <div className="bg-[#43e7f3af]">
+    <div className="">
       <div
-        className="relative mt-4  mx-auto bg-no-repeat  bg-center object-cover h-64 flex items-center justify-center rounded-md text-white"
+        className=" mt-4  mx-auto bg-no-repeat  bg-center o h-80 w-full flex items-center justify-center rounded-md text-white"
         style={{
-          backgroundImage: `url('https://img.freepik.com/free-vector/flat-design-shopping-center-facebook-cover_23-2149337410.jpg')`,
+          backgroundImage: `url('https://img.freepik.com/free-psd/horizontal-banner-template-big-sale-with-woman-shopping-bags_23-2148786755.jpg')`,
         }}>
         <div className="absolute inset-0 "></div>
         {/* <div className="relative z-10 text-center px-6">

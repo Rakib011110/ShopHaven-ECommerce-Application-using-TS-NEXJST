@@ -71,12 +71,12 @@ const BlogComponent = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mt-24 mx-auto p-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <div>
           <h2 className="text-2xl font-bold text-gray-800">
-            Latest <span className="text-green-500">Blog</span>
+            Latest <span className="text-blue-600">Blog</span>
           </h2>
           <p className="text-gray-500 text-sm">
             We tackle interesting topics every day in 2023.
@@ -113,8 +113,8 @@ const BlogComponent = () => {
               </h3>
               <p className="text-sm text-gray-600 mb-4">{blog.description}</p>
               <Link
-                className="text-green-500 font-semibold hover:underline text-sm"
-                href="#">
+                className="text-blue-600 font-semibold hover:underline text-sm"
+                href="/blog">
                 Read More »
               </Link>
             </div>
@@ -129,7 +129,7 @@ const BlogComponent = () => {
             key={i}
             className={`px-4 py-2 rounded-md ${
               currentPage === i + 1
-                ? "bg-green-500 text-white"
+                ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-gray-600 hover:bg-gray-300"
             }`}
             onClick={() => handlePageChange(i + 1)}>

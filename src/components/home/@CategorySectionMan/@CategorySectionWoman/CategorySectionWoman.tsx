@@ -106,7 +106,7 @@ const CategorySectionWoman = () => {
   // ];
 
   return (
-    <div className="mt- mb-10 container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
+    <div className="mt-20 mb-10 container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
       {/* Left Section: Hero Model */}
       <div className="flex-1">
         <div className="w-full h-full">

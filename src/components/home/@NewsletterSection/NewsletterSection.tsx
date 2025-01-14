@@ -1,76 +1,83 @@
 "use client";
 import { useState } from "react";
 
-const NewsletterSection = () => {
+const Newsletter = () => {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
-  const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setMessage("Thank you for subscribing!");
-        setEmail("rakib088880@gmail.com");
-      } else {
-        const { error } = await res.json();
-        setStatus("error");
-        setMessage(error || "Something went wrong. Please try again.");
-      }
-    } catch (err) {
-      setStatus("error");
-      setMessage("Network error. Please try again later.");
+  const handleSubscribe = () => {
+    if (!email) {
+      alert("Please enter a valid email address.");
+      return;
     }
+    // Handle subscription logic (e.g., send email to the backend)
+    alert(`Subscribed with email: ${email}`);
+    setEmail("");
   };
 
   return (
-    <div className="flex bg-slate-300  bg-opacity-40 flex-col mb-20 items-center bg-gradient-to-r border-4 border-blue-800  py-12 px-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4 uppercase">
-        Subscribe to Our Newsletter
-      </h2>
-      <p className="text-center mb-6">
-        Stay updated with the latest news, articles, and resources, sent to your
-        inbox weekly.
-      </p>
-      <form className="w-full max-w-md" onSubmit={handleSubmit}>
-        <div className="flex items-center">
+    <section className="bg-gray-100 p-8 mb-10 rounded-lg shadow-md">
+      {/* Newsletter Section */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-6 rounded-lg">
+        <div className="text-center md:text-left flex flex-col gap-2">
+          <h3 className="text-blue-600 font-semibold text-lg">Newsletter</h3>
+          <h2 className="text-2xl font-bold">Get weekly update</h2>
+        </div>
+        <div className="flex items-center w-full md:w-auto gap-4">
           <input
             type="email"
+            placeholder="example@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-            className="flex-grow px-4 border-blue-600 border py-2 rounded-l-md focus:outline-none text-gray-800"
+            className="flex-1 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
           <button
-            type="submit"
-            disabled={status === "loading"}
-            className="px-6 py-2 bg-[#1bf0ff] hover:bg-purple-800 rounded-r-md font-semibold transition disabled:opacity-50">
-            {status === "loading" ? "Submitting..." : "Subscribe"}
+            onClick={handleSubscribe}
+            className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+            Subscribe
           </button>
         </div>
-        {status !== "idle" && (
-          <p
-            className={`mt-4 text-sm ${
-              status === "success" ? "text-green-300" : "text-red-300"
-            }`}>
-            {message}
-          </p>
-        )}
-      </form>
-    </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Feature 1 */}
+        <div className="flex items-center gap-4">
+          <div className="text-blue-600 text-3xl">📦</div>
+          <div>
+            <h4 className="font-bold">Fast & Secure Delivery</h4>
+            <p className="text-gray-600">Tell about your service.</p>
+          </div>
+        </div>
+
+        {/* Feature 2 */}
+        <div className="flex items-center gap-4">
+          <div className="text-blue-600 text-3xl">💸</div>
+          <div>
+            <h4 className="font-bold">Money Back Guarantee</h4>
+            <p className="text-gray-600">Within 10 days.</p>
+          </div>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="flex items-center gap-4">
+          <div className="text-blue-600 text-3xl">🔄</div>
+          <div>
+            <h4 className="font-bold">24 Hour Return Policy</h4>
+            <p className="text-gray-600">No question ask.</p>
+          </div>
+        </div>
+
+        {/* Feature 4 */}
+        <div className="flex items-center gap-4">
+          <div className="text-blue-600 text-3xl">🎧</div>
+          <div>
+            <h4 className="font-bold">Pro Quality Support</h4>
+            <p className="text-gray-600">24/7 live support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default NewsletterSection;
+export default Newsletter;

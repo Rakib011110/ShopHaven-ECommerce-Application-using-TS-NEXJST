@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import Title from "@/src/lib/utils/Title";
 import ProductCard from "@/src/pages/ProductsCard/ProductsCard";
+import Loading from "../../UI/Loading/Loading";
 
 interface Product {
   id: string;
@@ -92,8 +93,19 @@ const Products = () => {
     setVisibleCount((prevCount) => prevCount + 10);
   };
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading products</div>;
+  if (isLoading)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  if (error)
+    return (
+      <div>
+        {" "}
+        <Loading />
+      </div>
+    );
 
   return (
     <div className="container mx-auto p-6 ">

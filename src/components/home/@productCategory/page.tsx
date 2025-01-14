@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -70,7 +72,7 @@ const Categories: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 mt-40">
+    <div className="container mx-auto px-4 mt-16">
       {/* Categories Section */}
       <Title
         bigTitle={"YOUR FAVOURITE CATEGORY"}
@@ -83,25 +85,32 @@ const Categories: React.FC = () => {
           )?.imageUrl;
 
           return (
-            // Unique key prop is based on the category name
-            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
             <div
               key={category}
-              className={`rounded-full p-2 border-b-2 ${
-                selectedCategory === category
-                  ? "border-green-500 shadow-lg"
-                  : "border-gray-300"
-              } hover:shadow-xl transition-shadow cursor-pointer text-center`}
+              className={`relative rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105 cursor-pointer`}
               onClick={() => handleCategoryClick(category)}>
-              <h2 className="text-xl font-semibold">
-                {category}
-                <br />
+              {/* Background Image */}
+              {categoryImage && (
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${categoryImage})`,
+                  }}
+                />
+              )}
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 hover:bg-opacity-30 transition-all"></div>
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+                <h2 className="text-lg font-semibold mb-2">{category}</h2>
                 <Link
-                  className=""
-                  href={`/all-product?category=${encodeURIComponent(category)}`}>
-                  <CardButton text="Show all" />
+                  href={`/all-product?category=${encodeURIComponent(category)}`}
+                  className="inline-block px-4 py-2 text-sm font-medium  rounded-lg shadow backdrop-blur-sm text-white transition-colors">
+                  Show All
                 </Link>
-              </h2>
+              </div>
             </div>
           );
         })}
@@ -110,9 +119,9 @@ const Categories: React.FC = () => {
       {/* Products Section */}
       {selectedCategory && (
         <div>
-          <h2 className="text-center text-2xl font-bold mb-6">
+          {/* <h2 className="text-center text-2xl font-bold mb-6">
             {selectedCategory}
-          </h2>
+          </h2> */}
           {filteredProducts.length > 0 ? (
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {filteredProducts
