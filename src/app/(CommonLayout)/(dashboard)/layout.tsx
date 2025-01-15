@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { FaUserCircle, FaSignOutAlt, FaBars } from "react-icons/fa";
+
 import { useUser } from "@/src/context/user.provider";
 import { SidebarOptions } from "@/src/components/UI/Sidebar/SidebarOptions/SidebarOptions";
 import {
@@ -9,31 +11,31 @@ import {
   customerLinks,
   dashboarduserLinks,
 } from "@/src/components/UI/Sidebar/constant";
-import { FaUserCircle, FaSignOutAlt, FaBars } from "react-icons/fa";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const { user } = useUser();
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const getSidebarLinks = () => {
     switch (user?.role) {
       case "ADMIN":
         return {
-          title: "Admin Dashboard",
+          title: "Admin Dashboard 🛠️",
           links: adminLinks,
         };
       case "VENDOR":
         return {
-          title: "Vendor Dashboard",
+          title: "Vendor Dashboard 🛒",
           links: vendorLinks,
         };
       case "CUSTOMER":
         return {
-          title: "Customer Dashboard",
+          title: "Customer Dashboard 🛍️",
           links: customerLinks,
         };
       case "USER":
         return {
-          title: "User Dashboard",
+          title: "User Dashboard 🌟",
           links: dashboarduserLinks,
         };
       default:
@@ -44,50 +46,86 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const sidebarConfig = getSidebarLinks();
 
   return (
-    <div className=" flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
-      <aside className="w-64 bg-blue-700 text-white flex flex-col p-4">
-        {sidebarConfig ? (
-          <>
-            {/* Dashboard Title */}
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold">{sidebarConfig.title}</h2>
-              <FaBars className="text-white cursor-pointer md:hidden" />
-            </div>
+    <div className="bg-[#25adc5] bg-opacity-30 min-h-screen">
+      <div className="flex container mx-auto rounded-md min-h-screen ">
+        {/* Sidebar */}
+        <aside
+          className={`${
+            isCollapsed ? "w-4" : "w-72"
+          } bg-blue-600 text-white flex flex-col p-4 transition-all duration-300`}>
+          {/* Collapse Button */}
+          <button
+            className="text-white mb-4 self-end"
+            onClick={() => setIsCollapsed(!isCollapsed)}>
+            <FaBars />
+          </button>
 
-            {/* User Info */}
-            <div className="flex items-center mb-6 space-x-3">
-              <FaUserCircle size={40} className="text-white" />
-              <div>
-                <h3 className="text-lg font-bold">{user?.email || "User"}</h3>
-                <span className="text-sm text-white capitalize">
-                  {user?.role?.toLowerCase()}
-                </span>
+          {sidebarConfig ? (
+            <>
+              {/* Dashboard Title */}
+              <div
+                className={`flex items-center mb-8 ${
+                  isCollapsed ? "justify-center" : "justify-between"
+                }`}>
+                {!isCollapsed && (
+                  <h2 className="text-xl font-bold">{sidebarConfig.title}</h2>
+                )}
               </div>
+
+              {/* User Info */}
+              <div
+                className={`flex items-center mb-6 space-x-3 ${
+                  isCollapsed ? "justify-center" : ""
+                }`}>
+                <FaUserCircle size={30} />
+                {!isCollapsed && (
+                  <div>
+                    <h3 className="text-lg font-bold">
+                      {user?.email || "User"}
+                    </h3>
+                    <span className="text-sm text-white capitalize">
+                      {user?.role?.toLowerCase()}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Navigation Links */}
+              <div className={`${isCollapsed ? "text-center" : ""}`}>
+                <SidebarOptions
+                  links={sidebarConfig.links.map((link) => ({
+                    ...link,
+                    className: `flex items-center space-x-2 p-2 rounded-md hover:bg-blue-700 transition-colors ${
+                      isCollapsed ? "justify-center" : ""
+                    }`,
+                  }))}
+                />
+              </div>
+
+              {/* Logout Button */}
+              <div className="group relative mt-auto">
+                <button
+                  className={`flex items-center space-x-2 text-red-400 hover:text-red-300 transition-all ${
+                    isCollapsed ? "justify-center" : ""
+                  }`}
+                  onClick={() => console.log("Logout clicked")}>
+                  <FaSignOutAlt />
+                  {!isCollapsed && <span>Logout 🚪</span>}
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="text-center text-red-500 font-bold">
+              Access Denied
             </div>
+          )}
+        </aside>
 
-            {/* Navigation Links */}
-            <SidebarOptions links={sidebarConfig.links} />
-
-            {/* Logout Button */}
-            <button
-              className="mt-auto flex items-center space-x-2 text-red-400 hover:text-red-300 transition-all"
-              onClick={() => console.log("Logout clicked")}>
-              <FaSignOutAlt />
-              <span>Logout</span>
-            </button>
-          </>
-        ) : (
-          <div className="text-center text-red-500 font-bold">
-            Access Denied
-          </div>
-        )}
-      </aside>
-
-      {/* Main Content */}
-      <main className="flex-1 p-8">
-        <div className="bg-white shadow-lg rounded-lg p-6">{children}</div>
-      </main>
+        {/* Main Content */}
+        <main className="flex-1 p-8">
+          <div className="bg-white shadow-lg rounded-lg p-6">{children}</div>
+        </main>
+      </div>
     </div>
   );
 };
