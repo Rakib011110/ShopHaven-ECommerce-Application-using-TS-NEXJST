@@ -3,9 +3,10 @@ import Image from "next/image";
 import CardButton from "../../UI/CardButton/CardButton";
 import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 import { IProduct } from "@/src/lib/utils/apitypes";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "@nextui-org/react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 interface Product extends IProduct {
   id: string;
   name: string;
@@ -20,6 +21,16 @@ interface Product extends IProduct {
 const CategorySectionMan = () => {
   const { data, isLoading, error } = useGetAllProductsQuery({});
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+
+    AOS.refresh();
+  }, []);
 
   const products: Product[] =
     (data?.data.map((product: any) => ({
@@ -66,7 +77,9 @@ const CategorySectionMan = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center space-x-8 mb-8 text-lg font-semibold">
+        <div
+          data-aos="zoom-in"
+          className="flex  justify-center space-x-8 mb-8 text-lg font-semibold">
           {hardcodedCategories.map((category) => (
             <button
               key={category}
@@ -90,7 +103,7 @@ const CategorySectionMan = () => {
               <div className="relative p-1 rounded-lg mx-auto">
                 <Image
                   alt={product.name}
-                  className="rounded-lg border-b border-blue-700 w-full p-1 h-[150px]"
+                  className="rounded-lg border-b border-blue-700 w-54 p-1 h-[170px]"
                   height={200}
                   src={product.imageUrl}
                   width={200}

@@ -24,7 +24,7 @@ const FlashSales = () => {
 
   return (
     <div>
-      <div className="bg-[#03030af6] rounded-3xl mt-15">
+      <div className="bg-[#03030af6] rounded-md mt-15">
         <div className="max-w-screen-2xl mx-auto h-[600px]">
           {/* Background video */}
           <video
@@ -45,7 +45,7 @@ const FlashSales = () => {
               <div>
                 <Image
                   alt={product.name}
-                  className="h-64 max-w-full mx-auto border-b p-3 border-blue-800 object-cover rounded-md mb-4"
+                  className="h-64 w-72 mx-auto items-center border-b  border-blue-800  rounded-md mb-4"
                   src={product.image}
                 />
               </div>

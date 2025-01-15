@@ -1,3 +1,9 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Banner from "@/src/components/home/@banner/page";
 import Products from "@/src/components/home/@availableProducts/page";
 import Categories from "@/src/components/home/@productCategory/page";
@@ -11,29 +17,47 @@ import NewsletterSection from "@/src/components/home/@NewsletterSection/Newslett
 import BlogComponent from "../../../components/home/BlogComponent/BlogComponent";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="">
-      <div className="">
+    <div>
+      <div data-aos="zoom-in">
         <Banner />
       </div>
       <div className="container mx-auto">
-        <div>
+        <div data-aos="fade-up">
           <Products />
         </div>
 
-        <div>
+        <div data-aos="fade-up">
           <Categories />
         </div>
-        <CategorySectionMan />
-        <CategorySectionWoman />
+        <div data-aos="zoom-in">
+          <CategorySectionMan />
+        </div>
+        <div data-aos="zoom-in">
+          <CategorySectionWoman />
+        </div>
 
-        <WhyChooseUs />
+        <div data-aos="fade-left">
+          <WhyChooseUs />
+        </div>
 
-        <OurServices />
-        <div>
+        <div data-aos="fade-right">
+          <OurServices />
+        </div>
+        <div data-aos="fade-up">
           <BlogComponent />
         </div>
-        <div className="">
+        <div data-aos="fade-up">
           <NewsletterSection />
         </div>
         <ScrollToTopButton />

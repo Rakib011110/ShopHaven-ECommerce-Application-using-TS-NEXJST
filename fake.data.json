@@ -48,5 +48,340 @@
     "discount": 10,
     "shopId": "aa91885b-d715-4ecd-a6f3-bf0bce071c41",
     "image": "https://www.coopersofstortford.co.uk/images/products/medium/L570_COi_2.jpg"
-  }
+  },
+
+  [
+    {
+      "name": "Classic Leather Wallet",
+      "description": "A sleek leather wallet with multiple compartments for cards, cash, and coins.",
+      "price": 49.99,
+      "category": "Accessories",
+      "inventoryCount": 70,
+      "discount": 8,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://diamu.com.bd/wp-content/uploads/2023/04/Black-Classic-Leather-Wallet-SB-W166.jpg"
+    },
+    {
+      "name": "Chic Crossbody Bag",
+      "description": "A stylish crossbody bag for women, perfect for casual outings and travel.",
+      "price": 79.99,
+      "category": "Accessories",
+      "inventoryCount": 45,
+      "discount": 10,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR65NERQT4wCyL1VVhxPuG_FN8wbTz20pts-IU-lKYrNwAcQnpaYVqGzsxtHOG0Hfx1gcw&usqp=CAU"
+    },
+    {
+      "name": "Statement Necklace",
+      "description": "A bold statement necklace that pairs well with evening wear and formal outfits.",
+      "price": 59.99,
+      "category": "Accessories",
+      "inventoryCount": 50,
+      "discount": 12,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://www.talbots.com/dw/image/v2/BKGN_PRD/on/demandware.static/-/Sites-master-catalog-talbots/default/dw0a5539df/images/244065134/244065134.jpg?sfrm=jpg"
+    },
+    {
+      "name": "Comfortable Wedge Sandals",
+      "description": "Lightweight wedge sandals perfect for summer and casual outings.",
+      "price": 69.99,
+      "category": "Shoes",
+      "inventoryCount": 75,
+      "discount": 10,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUxzqhsJAVs61TPmZYxLirIlVXnW51aNcHmpTSEYFglAaxsNvuPdWPfI8IkGz94-_nJEo&usqp=CAU"
+    },
+    {
+      "name": "Premium Leather Boots",
+      "description": "Stylish and durable leather boots, ideal for colder seasons or stylish outings.",
+      "price": 139.99,
+      "category": "Shoes",
+      "inventoryCount": 35,
+      "discount": 20,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://rang-bd.com/wp-content/uploads/2024/05/QWK-QLBMBC1L-16-1-scaled.webp"
+    },
+    {
+      "name": "Metallic Clutch Bag",
+      "description": "A shimmering clutch bag that adds glamour to evening and party outfits.",
+      "price": 39.99,
+      "category": "Accessories",
+      "inventoryCount": 65,
+      "discount": 10,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://media2.newlookassets.com/i/newlook/879542292/womens/accessories/bags/silver-glitter-clutch-bag.jpg"
+    },
+    {
+      "name": "Elegant Kitten Heels",
+      "description": "Classy and comfortable kitten heels that complement both office wear and casual dresses.",
+      "price": 79.99,
+      "category": "Shoes",
+      "inventoryCount": 40,
+      "discount": 12,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://images.express.com/is/image/expressfashion/0095_00316270_2073_a002?cache=on&wid=480&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
+    },
+    {
+      "name": "Casual Canvas Shoes",
+      "description": "Lightweight and breathable canvas shoes for everyday wear.",
+      "price": 49.99,
+      "category": "Shoes",
+      "inventoryCount": 85,
+      "discount": 8,
+      "shopId": "821ec134-9f6b-44d0-96ce-cce04a418370",
+      "image": "https://www.batabd.com/cdn/shop/products/1_784df9a1-f795-410f-8a2c-ee8eb65d96f8_1024x1024.jpg?v=1736346381"
+    }
+  ],
+
+  {
+    "name": "Fashionista Haven",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXFIh3kMcXYj2EyJg4U_8MkQDWJ60hNeMriKoXmbjbJ-rDmfT3A70lc_ljAJ-Ncn84Wi8&usqp=CAU",
+    "description": "Your go-to shop for trendy fashion and accessories.",
+    "contactNumber": "987654321"
+  },
+
+  [
+    {
+      "name": "Men's Formal Leather Belt",
+      "description": "Premium leather belt perfect for office and formal occasions.",
+      "price": 34.99,
+      "category": "Accessories",
+      "inventoryCount": 60,
+      "discount": 10,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://img.drz.lazcdn.com/static/bd/p/0e90fa496aa40882b145a9767b7b3d0d.jpg_720x720q80.jpg"
+    },
+    {
+      "name": "Casual Cotton Shirt for Men",
+      "description": "Breathable and lightweight cotton shirt, ideal for casual wear.",
+      "price": 29.99,
+      "category": "Clothing",
+      "inventoryCount": 80,
+      "discount": 5,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://m.media-amazon.com/images/I/51feQnSC1iL._AC_UY350_.jpg"
+    },
+    {
+      "name": "Classic Chino Pants",
+      "description": "Comfortable and stylish chinos, a perfect blend of style and comfort.",
+      "price": 44.99,
+      "category": "Clothing",
+      "inventoryCount": 40,
+      "discount": 15,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/475561/item/goods_08_475561_3x4.jpg?width=600"
+    },
+    {
+      "name": "Men's Aviator Sunglasses",
+      "description": "Stylish aviator sunglasses with UV protection.",
+      "price": 49.99,
+      "category": "Accessories",
+      "inventoryCount": 70,
+      "discount": 10,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://assets.ajio.com/medias/sys_master/root/20230523/kGwQ/646cbe05d55b7d0c63d0f199/-473Wx593H-466086514-grey-MODEL.jpg"
+    },
+    {
+      "name": "Men's Hiking Boots",
+      "description": "Durable and comfortable boots designed for rugged terrains.",
+      "price": 89.99,
+      "category": "Shoes",
+      "inventoryCount": 30,
+      "discount": 20,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://cdn.shopify.com/s/files/1/0659/9639/0655/products/d2623b6685f4aadcdeb778003a59287f38758158.jpg?v=1687268049"
+    },
+    {
+      "name": "Men's Leather Wallet",
+      "description": "Elegant and durable leather wallet with multiple compartments.",
+      "price": 19.99,
+      "category": "Accessories",
+      "inventoryCount": 100,
+      "discount": 5,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://www.pegai.com/cdn/shop/files/MALOENROMTONAL-TN_4a1f7598-d3ef-47b4-aa93-86139397bd1d.jpg?v=1728550157&width=1080"
+    },
+    {
+      "name": "Men's Running Shoes",
+      "description": "Lightweight running shoes designed for comfort and speed.",
+      "price": 64.99,
+      "category": "Shoes",
+      "inventoryCount": 50,
+      "discount": 10,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://storage.apex4u.com/ac05fe62-7af5-46d9-a6c6-194291ec4bca.jpg"
+    },
+    {
+      "name": "Men's Slim Fit Blazer",
+      "description": "Tailored slim fit blazer perfect for formal and semi-formal events.",
+      "price": 119.99,
+      "category": "Clothing",
+      "inventoryCount": 20,
+      "discount": 15,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://www.miik.ca/cdn/shop/files/Emily-soft-blazer-navy-for-women-off-figure_1500x.jpg?v=1721242518"
+    },
+    {
+      "name": "Men's Digital Sports Watch",
+      "description": "Waterproof digital sports watch with multiple functionalities.",
+      "price": 29.99,
+      "category": "Accessories",
+      "inventoryCount": 90,
+      "discount": 5,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://v2awatch.com/cdn/shop/products/1_d14e482d-e022-4532-98c6-fb81228658e3.jpg"
+    },
+    {
+      "name": "Men's Hoodie Sweatshirt",
+      "description": "Cozy and warm hoodie, perfect for casual outings or lounging.",
+      "price": 39.99,
+      "category": "Clothing",
+      "inventoryCount": 60,
+      "discount": 10,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://artisanclick.com/wp-content/uploads/2021/12/274-scaled.jpg"
+    },
+    {
+      "name": "Men's Polo T-Shirt",
+      "description": "Classic polo T-shirt made with premium cotton for comfort.",
+      "price": 24.99,
+      "category": "Clothing",
+      "inventoryCount": 80,
+      "discount": 5,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/JV/DA/BC/958301/mens-blue-polo-t-shirts.jpg"
+    },
+    {
+      "name": "Men's Leather Gloves",
+      "description": "Stylish and warm leather gloves, perfect for cold weather.",
+      "price": 39.99,
+      "category": "Accessories",
+      "inventoryCount": 40,
+      "discount": 10,
+      "shopId": "9bce3e7b-9000-4e73-ba0a-ccba8ebb370d",
+      "image": "https://static-01.daraz.com.bd/p/92e50044641e44937832665f17ad8c1a.jpg"
+    }
+  ],
+  [
+    {
+      "name": "Portable Camping Chair",
+      "description": "Lightweight and foldable camping chair with durable fabric for outdoor use.",
+      "price": 39.99,
+      "category": "Outdoor Essentials",
+      "inventoryCount": 50,
+      "discount": 10,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://img.drz.lazcdn.com/static/bd/p/3baaa871ceb5679b7645228ab5ffd76d.jpg_960x960q80.jpg_.webp"
+    },
+    {
+      "name": "Insulated Water Bottle",
+      "description": "Double-wall insulated water bottle to keep drinks hot or cold for hours.",
+      "price": 24.99,
+      "category": "Outdoor Essentials",
+      "inventoryCount": 100,
+      "discount": 15,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://sportsworld.com.bd/wp-content/uploads/2021/10/25_2.jpg"
+    },
+    {
+      "name": "LED Camping Lantern",
+      "description": "Rechargeable and portable LED lantern with adjustable brightness.",
+      "price": 19.99,
+      "category": "Outdoor Essentials",
+      "inventoryCount": 75,
+      "discount": 5,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://img.drz.lazcdn.com/static/bd/p/9e86d84056ef7e615bed080285a3ae72.jpg_720x720q80.jpg"
+    },
+    {
+      "name": "Wireless Earbuds",
+      "description": "Bluetooth-enabled wireless earbuds with noise cancellation and long battery life.",
+      "price": 49.99,
+      "category": "Tech & Gadgets",
+      "inventoryCount": 120,
+      "discount": 20,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://down-my.img.susercontent.com/file/my-11134207-7r98y-lonq1h3utcwqfd"
+    },
+    {
+      "name": "Smart Fitness Band",
+      "description": "Fitness tracker with heart rate monitoring and activity tracking.",
+      "price": 39.99,
+      "category": "Tech & Gadgets",
+      "inventoryCount": 60,
+      "discount": 10,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://gadgetnmusic.com/wp-content/uploads/2024/09/Xiaomi-Mi-Smart-Band-9-6.png"
+    },
+    {
+      "name": "Portable Phone Charger",
+      "description": "Compact power bank with fast charging capabilities.",
+      "price": 29.99,
+      "category": "Tech & Gadgets",
+      "inventoryCount": 90,
+      "discount": 15,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://www.lifewire.com/thmb/E1YsWOA5_CVX8fiWSJvuVt039zs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/portablecharger-2137223a959144b6baea0857e3a58ad9.jpg"
+    },
+    {
+      "name": "Men's Casual Watch",
+      "description": "Stylish and water-resistant analog watch for everyday wear.",
+      "price": 49.99,
+      "category": "Fashion & Lifestyle",
+      "inventoryCount": 50,
+      "discount": 10,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://specials-images.forbesimg.com/imageserve/653c0299aa6fe7789c92a62c/The-Runwell-41mm/960x0.jpg"
+    },
+    {
+      "name": "Classic Leather Wallet",
+      "description": "Elegant leather wallet with multiple card slots and a sleek design.",
+      "price": 29.99,
+      "category": "Fashion & Lifestyle",
+      "inventoryCount": 70,
+      "discount": 15,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8AS2_o0J27JPrdwZCu1pQVjzevSm28TRsjg&s"
+    },
+    {
+      "name": "Stylish Sunglasses for Men",
+      "description": "UV-protected sunglasses with a fashionable frame design.",
+      "price": 39.99,
+      "category": "Fashion & Lifestyle",
+      "inventoryCount": 60,
+      "discount": 20,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2020/11/DP/CW/SB/78485156/wayfair-full-black-sunglasses-500x500.jpg"
+    },
+    {
+      "name": "Non-Stick Frying Pan",
+      "description": "Durable non-stick frying pan with heat-resistant handle.",
+      "price": 24.99,
+      "category": "Home & Kitchen",
+      "inventoryCount": 80,
+      "discount": 10,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://gluons.shop/public/uploads/all/d21d00b677b9dc4dece2362f2fcc5c92.jpg"
+    },
+    {
+      "name": "Glass Food Storage Containers",
+      "description": "Set of 5 airtight glass containers for meal prep and food storage.",
+      "price": 34.99,
+      "category": "Home & Kitchen",
+      "inventoryCount": 40,
+      "discount": 15,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://cdn.thewirecutter.com/wp-content/media/2021/04/food-storage-container-2048px-1278.jpg"
+    },
+    {
+      "name": "Automatic Coffee Maker",
+      "description": "Compact coffee maker with programmable features and easy cleaning.",
+      "price": 89.99,
+      "category": "Home & Kitchen",
+      "inventoryCount": 30,
+      "discount": 20,
+      "shopId": "b71c9c85-2e4c-4afd-9be7-2c18a16ea349",
+      "image": "https://www.shopz.com.bd/wp-content/uploads/2024/11/DeLonghi-ECAM250.33.TB-Magnifica-S-Smart-Automatic-coffee-maker.jpg"
+    }
+  ]
 ]

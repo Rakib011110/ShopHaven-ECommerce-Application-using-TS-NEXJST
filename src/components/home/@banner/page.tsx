@@ -8,23 +8,29 @@ const Banner = () => {
     <div>
       <div className="banner-container   mx-auto">
         <Swiper
-          className="max-h-[750px] w-full"
+          className="max-h-[740px] w-full"
           autoplay={{ delay: 3000 }}
           loop={true}
           slidesPerView={1}
           spaceBetween={50}>
           <SwiperSlide>
             <Image
-              alt="Slide 2"
-              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1735711812/Gray_Minimalist_New_Collection_Banner_2_1_aoapkd.png"
+              alt="Slide 1"
+              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1736913875/Purple_And_Yellow_Playful_Discount_Banner_3_pyh0vi.png"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               alt="Slide 2"
-              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1735711987/Pink_White_Photocentric_Feminine_Shopping_Fashion_YouTube_Channel_Art_Banner_1_avy7cu.png"
+              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1736888849/Purple_And_Yellow_Playful_Discount_Banner_2_1_zubfcv.png"
             />
           </SwiperSlide>
+          {/* <SwiperSlide>
+            <Image
+              alt="Slide 3"
+              src="https://res.cloudinary.com/dqp2vi7h1/image/upload/v1736887019/Blue_Pink_Modern_Special_Offer_Sale_Banner_1_1_wcbvon.png"
+            />
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>

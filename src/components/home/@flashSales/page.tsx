@@ -46,7 +46,7 @@ const FlashSales: React.FC = () => {
                 <div className="relative p-1 rounded-lg mx-auto">
                   <Image
                     alt={product.name}
-                    className="rounded-lg border-b border-blue-700 w-full p-1 h-[200px]"
+                    className="rounded-lg border-b border-blue-700 w-54  h-[200px]"
                     height={150}
                     src={product.image}
                     width={200}

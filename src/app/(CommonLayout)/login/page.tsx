@@ -12,6 +12,7 @@ import { loginValidationSchema } from "@/src/schemas/login.schema";
 import { useUserLogin } from "@/src/hooks/auth.hook";
 import Loading from "@/src/components/UI/Loading/Loading";
 import TIInput from "@/src/components/resubaleform/TIInput";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
@@ -39,40 +40,55 @@ const LoginPage = () => {
   return (
     <>
       {isPending && <Loading />}
-      <div className="flex h-screen w-full items-center justify-center bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400">
+      <div className="h-screen w-full bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400 flex items-center justify-center">
         <div className="flex flex-col lg:flex-row w-[90%] max-w-[900px] bg-white rounded-xl shadow-lg overflow-hidden">
-          {/* Left Side: Image */}
-          <div className="hidden lg:block w-full lg:w-1/2 bg-blue-100">
-            <img
-              alt="Login Illustration"
-              className="h-full w-full object-cover"
-              src="https://img.freepik.com/free-vector/sign-page-abstract-concept-illustration-enter-application-mobile-screen-user-login-form-website-page-interface-ui-new-profile-registration-email-account_335657-936.jpg" // Replace with your image path
+          {/* Left Side: Animation */}
+          <div className="hidden lg:flex w-full lg:w-1/2 bg-blue-100 items-center justify-center p-6">
+            <Player
+              className="w-[80%] h-auto max-w-[400px]"
+              autoplay
+              loop
+              src="https://assets6.lottiefiles.com/packages/lf20_nc1bp7st.json"
             />
           </div>
 
           {/* Right Side: Login Form */}
           <div className="w-full lg:w-1/2 p-8">
-            <h3 className="text-3xl font-extrabold text-gray-900 text-center mb-4">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center mb-6">
               Welcome to ShopHaven
             </h3>
-            <div className="rounded-lg mt-8">
-              <div className="flex justify-between space-x-4">
-                {Object.entries(credentials).map(([key, value]) => (
-                  <div key={key} className="group relative flex-1 text-center">
-                    <button className="w-full py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all shadow-sm">
-                      {key.charAt(0).toUpperCase() + key.slice(1)}
-                    </button>
-                    <div className="absolute inset-x-0 top-full mt-2 w-full text-center  text-white  p- bg-blue-500 z-50 text-sm rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {value}
+
+            {/* Credentials Buttons */}
+            <div className="rounded-lg mb-6">
+              <div className="flex justify-between space-x-2 sm:space-x-4">
+                {Object.entries(credentials).map(([key, value]) => {
+                  const [email, password] = value
+                    .split(" | ")
+                    .map((item) => item.split(": ")[1]);
+
+                  return (
+                    <div
+                      key={key}
+                      className="group relative flex-1 text-center">
+                      <button
+                        className="w-full py-2 text-sm sm:text-base font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-all shadow-sm"
+                        onClick={() => handleUserLogin({ email, password })}>
+                        {key.charAt(0).toUpperCase() + key.slice(1)}
+                      </button>
+                      <div className="absolute inset-x-0 top-full mt-2 w-full text-center bg-blue-500 text-white text-xs sm:text-sm rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2 z-50">
+                        {value}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
-            <p className="text-gray-600 text-center mb-6">
+
+            <p className="text-gray-600 text-center mb-6 text-sm sm:text-base">
               Sign in to continue
             </p>
 
+            {/* Login Form */}
             <TIForm
               resolver={zodResolver(loginValidationSchema)}
               onSubmit={onSubmit}>
@@ -98,7 +114,8 @@ const LoginPage = () => {
               </Button>
             </TIForm>
 
-            <div className="text-center mt-6">
+            {/* Register and Forgot Password Links */}
+            <div className="text-center mt-6 text-sm">
               <span className="text-gray-600">Do not have an account?</span>{" "}
               <Link
                 className="text-blue-600 font-semibold hover:underline"
@@ -106,7 +123,7 @@ const LoginPage = () => {
                 Register
               </Link>
             </div>
-            <div className="text-center mt-4">
+            <div className="text-center mt-4 text-sm">
               <span className="text-gray-600">Forgot Password?</span>{" "}
               <Link
                 className="text-blue-600 font-semibold hover:underline"

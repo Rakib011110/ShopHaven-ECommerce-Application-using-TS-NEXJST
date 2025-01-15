@@ -147,17 +147,17 @@ const AllProducts = () => {
 
         <div className=" mt-5 mx-auto flex justify-between items-center mb-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">
+            <h2 className="text-2xl  font-bold text-gray-800">
               All <span className="text-blue-600">roducts</span>
             </h2>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm ">
               Discover the most recent products added to our store.
             </p>
           </div>
           <div>
             {/* Search Input */}
             <input
-              className="border px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="border px-4 hidden py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Search products..."
               type="text"
               value={searchQuery}
@@ -167,7 +167,7 @@ const AllProducts = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-1  gap-4">
         {/* Filters */}
         <div className="col-span-1 border p-4 rounded bg-gray-50">
           <input
@@ -213,14 +213,14 @@ const AllProducts = () => {
             <option value="desc">Price: High to Low</option>
           </select>
           <button
-            className="border px-4 py-2 rounded font-semibold bg-[#04ecec] animate-bounce font-semibol  w-full"
+            className="border px-4 py-2 rounded font-semibold bg-blue-600 animate-bounce font-semibol text-white  w-full"
             onClick={resetFilters}>
             Clear Filters
           </button>
         </div>
 
         {/* Product Grid */}
-        <div className="col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="col-span-3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleProducts.map((product: Product) => (
             <div
               key={product.id}
@@ -228,7 +228,7 @@ const AllProducts = () => {
               <div className="flex justify-center">
                 <Image
                   alt={product.name}
-                  className="h-40 w-full border p-3 border-blue-800 object-cover rounded-md mb-4"
+                  className="h-48 w-64 border-b p-3 border-blue-800 object-cover rounded-md mb-4"
                   src={product.image}
                 />
               </div>

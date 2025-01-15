@@ -15,7 +15,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="bg-gray-100 p-8 mb-10 rounded-lg shadow-md">
+    <section className="bg-gray-100 border-t-3 border-blue-800 mt-10 p-8 mb-10 rounded-lg shadow-md">
       {/* Newsletter Section */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-6 rounded-lg">
         <div className="text-center md:text-left flex flex-col gap-2">

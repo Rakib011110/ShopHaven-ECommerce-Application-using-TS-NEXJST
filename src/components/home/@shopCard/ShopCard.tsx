@@ -16,6 +16,7 @@ import {
   useGetCartItemsQuery,
 } from "@/src/redux/api/cartApi";
 import ProductCard from "@/src/pages/ProductsCard/ProductsCard";
+import CardButton from "../../UI/CardButton/CardButton";
 
 const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
   const [addToCart] = useAddItemToCartMutation();
@@ -135,20 +136,30 @@ const ShopCard = ({ shop, handleUnFollow, handleFollow }: any) => {
 
           <div className="w-4/5 items-center ">
             {filteredProducts && filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {filteredProducts
-                  ?.slice(0, 4)
-                  .map((product: any) => (
-                    <ProductCard
-                      key={product.id}
-                      description={product.description}
-                      id={product.id}
-                      image={product.image}
-                      link={`/product/${product.id}`}
-                      name={product.name}
-                      price={product.price}
-                    />
-                  ))}
+              <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {filteredProducts?.slice(0, 4).map((product: any) => (
+                  <div
+                    key={product.id}
+                    className="border bg-[#a5cfff] border-blue-600 rounded-xl  bg-opacity-20  shadow-md p-4">
+                    <div className="flex justify-center">
+                      <Image
+                        alt={product.name}
+                        className="h-48 w-64 border-b p-3 border-blue-800 object-cover rounded-md mb-4"
+                        src={product.image}
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {product.name}
+                    </h3>
+                    <p className="text-gray-600 mb-2">{product.description}</p>
+                    <p className="text-lg font-bold mb-4">${product.price}</p>
+                    <div className="flex gap-2">
+                      <Link href={`/product/${product.id}`}>
+                        <CardButton text="details" />
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
             ) : (
               <p className="text-sm text-gray-500">

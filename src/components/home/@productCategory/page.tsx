@@ -100,10 +100,10 @@ const Categories: React.FC = () => {
               )}
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 hover:bg-opacity-30 transition-all"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-50 hover:bg-opacity-30 transition-all"></div>
 
               {/* Content */}
-              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-blue-100 backdrop-blur-sm p-4">
                 <h2 className="text-lg font-semibold mb-2">{category}</h2>
                 <Link
                   href={`/all-product?category=${encodeURIComponent(category)}`}

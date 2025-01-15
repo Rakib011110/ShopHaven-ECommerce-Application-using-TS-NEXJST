@@ -59,7 +59,7 @@ const Shop = () => {
     <div className="container mx-auto">
       <div>{/* <ShopBanner /> */}</div>
 
-      <div className="mx-auto p-6 bg-gray-50 min-h-screen">
+      <div className="mx-auto p-6 bg-gray-50 ">
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-6">
           {shopData.data.map((shop: any) => (
             <ShopCard
