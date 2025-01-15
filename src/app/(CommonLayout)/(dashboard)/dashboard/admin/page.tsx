@@ -3,7 +3,10 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
+
 import { useGetAllOrdersQuery } from "@/src/redux/api/orderApi"; // Adjust the import based on your project structure
+import { useGetAllCustomerReviewsQuery } from "@/src/redux/api/ReviewAPI";
+import { useGetAllProductsQuery } from "@/src/redux/api/productApi";
 
 // Dynamically import ApexCharts to avoid SSR issues
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
@@ -23,7 +26,8 @@ const Admin: React.FC = () => {
   const ordersPerPage = 5;
 
   const { data: ordersData, isLoading, isError } = useGetAllOrdersQuery({});
-
+  const { data: products } = useGetAllProductsQuery({});
+  console.log(products);
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-full p-4">
@@ -56,6 +60,7 @@ const Admin: React.FC = () => {
   const paymentStatusCounts = orders.reduce<Record<string, number>>(
     (acc, order) => {
       acc[order.paymentStatus] = (acc[order.paymentStatus] || 0) + 1;
+
       return acc;
     },
     {}
@@ -64,6 +69,7 @@ const Admin: React.FC = () => {
   const orderStatusCounts = orders.reduce<Record<string, number>>(
     (acc, order) => {
       acc[order.status] = (acc[order.status] || 0) + 1;
+
       return acc;
     },
     {}
@@ -123,19 +129,19 @@ const Admin: React.FC = () => {
             Payment Status Distribution
           </h2>
           <Chart
+            height={300}
             options={paymentStatusChart}
             series={Object.values(paymentStatusCounts)}
             type="donut"
-            height={300}
           />
         </div>
         <div className="p-6 bg-white rounded-lg shadow-lg">
           <h2 className="text-xl font-bold mb-4">Order Status Distribution</h2>
           <Chart
+            height={300}
             options={orderStatusChart}
             series={[{ data: Object.values(orderStatusCounts) }]}
             type="bar"
-            height={300}
           />
         </div>
       </div>
