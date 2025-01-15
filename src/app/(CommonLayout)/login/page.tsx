@@ -6,13 +6,20 @@ import React, { useEffect } from "react";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter, useSearchParams } from "next/navigation";
+// import { Player } from "@lottiefiles/react-lottie-player";
 
 import TIForm from "@/src/components/resubaleform/TIForm";
 import { loginValidationSchema } from "@/src/schemas/login.schema";
 import { useUserLogin } from "@/src/hooks/auth.hook";
 import Loading from "@/src/components/UI/Loading/Loading";
 import TIInput from "@/src/components/resubaleform/TIInput";
-import { Player } from "@lottiefiles/react-lottie-player";
+
+import dynamic from "next/dynamic";
+
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
@@ -45,9 +52,9 @@ const LoginPage = () => {
           {/* Left Side: Animation */}
           <div className="hidden lg:flex w-full lg:w-1/2 bg-blue-100 items-center justify-center p-6">
             <Player
-              className="w-[80%] h-auto max-w-[400px]"
               autoplay
               loop
+              className="w-[80%] h-auto max-w-[400px]"
               src="https://assets6.lottiefiles.com/packages/lf20_nc1bp7st.json"
             />
           </div>
