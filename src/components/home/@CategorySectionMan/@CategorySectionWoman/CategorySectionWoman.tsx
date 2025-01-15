@@ -153,7 +153,7 @@ const CategorySectionWoman = () => {
               <div className="relative p-1 rounded-lg mx-auto">
                 <Image
                   alt={product.name}
-                  className="rounded-lg border-b border-blue-700 w-54 p-1 h-[170px]"
+                  className="rounded-lg border-b border-blue-700 w-54 p-1 h-[190px]"
                   height={150}
                   src={product.imageUrl}
                   width={200}

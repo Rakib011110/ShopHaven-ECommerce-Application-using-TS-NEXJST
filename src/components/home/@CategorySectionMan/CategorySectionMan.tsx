@@ -69,7 +69,7 @@ const CategorySectionMan = () => {
   return (
     <div className="mt-20 mb-10 container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-stretch">
       {/* Left Section: Product Cards */}
-      <div className="flex-[1.7] flex flex-col">
+      <div className="flex-[1.5] flex flex-col">
         {/* Title */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold mb-2">For Men’s Collection</h2>
@@ -103,7 +103,7 @@ const CategorySectionMan = () => {
               <div className="relative p-1 rounded-lg mx-auto">
                 <Image
                   alt={product.name}
-                  className="rounded-lg border-b border-blue-700 w-54 p-1 h-[170px]"
+                  className="rounded-lg border-b border-blue-700 w-54 p-1 h-[190px]"
                   height={200}
                   src={product.imageUrl}
                   width={200}
